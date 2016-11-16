@@ -102,7 +102,7 @@ def makeWebhookResult(req):
           # "contextOut": [],
           "source": "flightAgent"
       }
-    if req.get("result").get("action") == "getStatus":
+    elif req.get("result").get("action") == "getStatus":
       
       result = req.get("result")
       parameters = result.get("parameters")
@@ -125,7 +125,8 @@ def makeWebhookResult(req):
           # "contextOut": [],
           "source": "flightAgent"
       }
-    return {}
+    else:
+      return {}
     
     
     
