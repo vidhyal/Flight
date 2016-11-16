@@ -80,7 +80,8 @@ def printTable():
 
 def makeWebhookResult(req):
     foundIntent = False
-    if req.get("result").get("action") == "getSchedule":
+    reqAction = req.get("result").get("action")
+    if reqAction == "getSchedule":
       foundIntent= True
       result = req.get("result")
       parameters = result.get("parameters")
@@ -97,7 +98,7 @@ def makeWebhookResult(req):
       print(speech)
 
       
-    elif req.get("result").get("action") == "getStatus":
+    elif reqAction == "getStatus":
       foundIntent= True
       result = req.get("result")
       parameters = result.get("parameters")
