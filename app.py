@@ -91,7 +91,7 @@ def makeWebhookResult(req):
       
       if (x):
         x = x[0]
-        speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.status)
+        speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.Status)
       else:
         speech = "cannot find that flight" + str(flightnumber)
       #speech = "new hi"
