@@ -67,7 +67,7 @@ def printTable():
 
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") != "BakerAir 122":
+    if req.get("result").get("action") != "getSchedule":
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
