@@ -78,13 +78,13 @@ def printTable():
 	for x in table:
 		x.printSchedule()
 
+#there is a bug in this function
 def getTravelTime (sch):
   initTime = datetime.strptime(sch.DepartureTime, '%I:%M%p')
   finTime = dateTime.strpTime(sch.ArrivalTime, '%I:%M%p')
   dur = finTime-initTime
   dur = dur.seconds//60
-  #duration = str(dur // 60 )+ " hrs  and "+str(dur % 60) +"mins"
-  duration = dur
+  duration = str(dur // 60 ) + " hrs  and "+str(dur % 60) + "mins"
   return duration
 
 def makeWebhookResult(req):
@@ -104,6 +104,23 @@ def makeWebhookResult(req):
         #can't understand why this gives an error.
         speech = "cannot find that flight " + str(flightnumber)
       #speech = "new hi"
+      print("Response:")
+      print(speech)
+
+    if reqAction == "findStatus":
+      foundIntent= Truem
+      result = req.get("result")
+      parameters = result.get("parameters")
+      status = paramters.get("status")
+
+      x = (getSchedule("status",status))
+
+      if (x):
+        speech = "Flights that are currently " + str(x[0].status) + "are; "
+        for n in x:
+          speech += str(n.airline) + " flight " + str(n.flightnumber)
+      else:
+        speech = "No flights have that status"
       print("Response:")
       print(speech)
 
@@ -163,8 +180,7 @@ def makeWebhookResult(req):
 
       if (x):
         x = x[0]
-        x1 = "55"
-        #getTravelTime(x)
+        x1 = getTravelTime(x)
         speech = str(x.airline) + " flight "+ str(x.flightnumber) +" flies for  " + str(x1)
       else:
         speech = "cannot find that flight " + str(flightnumber)
