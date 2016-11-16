@@ -80,7 +80,19 @@ def getCityFrom(cityStr):
   for city in cities:
     if city in cityStr:
       return city
-  
+      
+def getLongest(tab):
+  Traveltime = {}
+  longest = 0
+  ind = 0
+  strLong = ""
+  for i in range (len(tab)):
+    x,tt = getTravelTime(tab[i])
+    if (tt>longest):
+      longest = tt
+      ind = i
+      strLong = x
+  return tab[i], strLong
     
 def printTable():
 	for x in table:
@@ -93,7 +105,7 @@ def getTravelTime (sch):
   dur = finTime-initTime
   dur = dur.seconds//60
   duration = str(dur // 60 ) + " hrs  and "+str(dur % 60) + "mins"
-  return duration
+  return duration, dur
 
 def makeWebhookResult(req):
     foundIntent = False
@@ -189,7 +201,7 @@ def makeWebhookResult(req):
 
       if (x):
         x = x[0]
-        x1 = getTravelTime(x)
+        x1, dur = getTravelTime(x)
         speech = str(x.airline) + " flight "+ str(x.flightnumber) +" flies for  " + str(x1)
       else:
         speech = "cannot find that flight " + str(flightnumber)
@@ -216,6 +228,26 @@ def makeWebhookResult(req):
       print("Response:")
       print(speech)
 
+    if reqAction =="getLongestBetween"  :
+      foundIntent = True
+      result = req.get("result")
+      parameters = result.get("parameters")
+      departcity = parameters.get("Departure_city")
+      arrivecity = parameters.get("Arrival_City")
+      
+      departcity = getCityFrom(departcity)
+      arrivecity = getCityFrom(arrivecity)
+      x = (getSchedule1([["DepartureCity", departcity],["ArrivalCity", arrivecity]]))
+      x1,tt = getLongest(x)
+      if (x1):
+        speech = "The longest flight from :" + str(x1.DepartureCity) +" to " +str(x1.ArrivalCity) +" is "+ str(x1.airline) +" flight "+ str(x1.flightnumber)+". It takes "+ str(tt)
+      else:
+        speech = "There are no direct flights in our database between the cities you asked"
+      #speech = str(departcity)+ " " + str(arrivecity)
+      print("Response:")
+      print(speech)
+
+    
     if (foundIntent):
 
       return {
