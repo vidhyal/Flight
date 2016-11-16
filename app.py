@@ -111,9 +111,9 @@ def makeWebhookResult(req):
       foundIntent= Truem
       result = req.get("result")
       parameters = result.get("parameters")
-      Status = paramters.get("status")
+      Status = paramters.get("Status")
 
-      x = (getSchedule("status",Status))
+      x = (getSchedule("Status",Status))
 
       if (x):
         speech = "Flights that are currently " + str(x[0].Status) + "are; "
