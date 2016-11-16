@@ -205,14 +205,14 @@ def makeWebhookResult(req):
       
       departcity = getCityFrom(departcity)
       arrivecity = getCityFrom(arrivecity)
-      #x = (getSchedule1([["DepartureCity", departcity],["ArrivalCity", arrivecity]]))
-      #if (x):
-       # speech = "The flights available are:"
-        #for i in x:
-         # speech += str(i.airline) + " flight " + str(i.flightnumber)+ " departs " +str(i.DepartureCity)+" at " + str(i.DepartureTime) + " and reaches " +str(i.ArrivalCity) + " at " + str(i.ArrivalTime) +". "
-      #else:
-       # speech = "There are no direct flights in our database between the cities you asked"
-      speech = str(departcity)+ " " + str(arrivecity)
+      x = (getSchedule1([["DepartureCity", departcity],["ArrivalCity", arrivecity]]))
+      if (x):
+        speech = "The flights available are:"
+        for i in x:
+          speech += str(i.airline) + " flight " + str(i.flightnumber)+ " departs " +str(i.DepartureCity)+" at " + str(i.DepartureTime) + " and reaches " +str(i.ArrivalCity) + " at " + str(i.ArrivalTime) +". "
+      else:
+        speech = "There are no direct flights in our database between the cities you asked"
+      #speech = str(departcity)+ " " + str(arrivecity)
       print("Response:")
       print(speech)
 
