@@ -79,8 +79,9 @@ def printTable():
 
 
 def makeWebhookResult(req):
+    foundIntent = False
     if req.get("result").get("action") == "getSchedule":
-      
+      foundIntent= True
       result = req.get("result")
       parameters = result.get("parameters")
       flightnumber = parameters.get("FlightNumber")
@@ -95,15 +96,9 @@ def makeWebhookResult(req):
       print("Response:")
       print(speech)
 
-      return {
-          "speech": speech,
-          "displayText": speech,
-          #"data": {},
-          # "contextOut": [],
-          "source": "flightAgent"
-      }
-    elif req.get("result").get("action") == "getStatus":
       
+    elif req.get("result").get("action") == "getStatus":
+      foundIntent= True
       result = req.get("result")
       parameters = result.get("parameters")
       flightnumber = parameters.get("FlightNumber")
@@ -117,7 +112,7 @@ def makeWebhookResult(req):
         speech = "cannot find that flight" + str(flightnumber)
       print("Response:")
       print(speech)
-
+    if (foundIntent):
       return {
           "speech": speech,
           "displayText": speech,
@@ -133,19 +128,7 @@ def makeWebhookResult(req):
 table =[]
 if __name__ == '__main__':
     makeTable()
-    #printTable()
-    #flightnumber =123
-    #schedule = getSchedule("flightnumber", flightnumber)
-    #for i in schedule:
-    #  i.printSchedule()
-    #x = (getSchedule("flightnumber", flightnumber))
-    
-    #if (x):
-     # x = x[0]
-      #speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
-    #else:
-     # speech = "cannot find that flight"
-    #print (speech)
+   
     port = int(os.getenv('PORT', 5000))
 
     print ("Starting app on port %d" % port)
