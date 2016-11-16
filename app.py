@@ -102,6 +102,7 @@ def makeWebhookResult(req):
         speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.Status)
       else:
         #can't understand why this gives an error.
+        #I haven't found a bug here
         speech = "cannot find that flight " + str(flightnumber)
       #speech = "new hi"
       print("Response:")
@@ -118,7 +119,7 @@ def makeWebhookResult(req):
       if (x):
         speech = "Flights that are currently " + str(x[0].Status) + "are; "
         for n in x:
-          speech += str(n.airline) + " flight " + str(n.flightnumber)
+          speech += str(n.airline) + " flight " + str(n.flightnumber) + " "
       else:
         speech = "No flights have that status"
       print("Response:")
