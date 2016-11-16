@@ -43,18 +43,18 @@ class Schedule():
 
 def makeTable():
 	#table = []
-	table.append(Schedule('AjaxAir', 113, 'Portland', 'Atlanta', '8:03 AM', '12:51 PM', 'Landed'))    
+	table.append(Schedule('AjaxAir', 113, 'Portland', 'Atlanta', '8:03 AM', '12:51 PM', 'Landed'))
 	table.append(Schedule('AjaxAir',114, 'Atlanta', 'Portland', '2:05 PM', '4:44 PM', 'Boarding'))
 	table.append(Schedule('BakerAir', 121, 'Atlanta', 'New York', '5:14 PM', '7:20 PM', 'Departed'))
 	table.append(Schedule('BakerAir', 122, 'New York', 'Portland', '9:00 PM', '12:13 AM', 'Scheduled'))
 	table.append(Schedule('BakerAir', 124,	'Portland', 'Atlanta','9:03 AM', '12:52 PM' ,'Delayed to 9:55'))
 	table.append(Schedule('CarsonAir', 522,	'Portland', 'New York', '2:15 PM', '4:58 PM', 'Scheduled'))
-	table.append(Schedule('CarsonAir', 679,	'New York', 'Atlanta', '9:30 AM', '11:30 AM','Departed'))	
-	table.append(Schedule('CarsonAir', 670,	'New York', 'Portland', '9:30 AM', '12:05 PM',	'Departed'))	
+	table.append(Schedule('CarsonAir', 679,	'New York', 'Atlanta', '9:30 AM', '11:30 AM','Departed'))
+	table.append(Schedule('CarsonAir', 670,	'New York', 'Portland', '9:30 AM', '12:05 PM',	'Departed'))
 	table.append(Schedule('CarsonAir', 671,	'Atlanta', 'New York',	'1:20 PM','2:55 PM'	,'Scheduled'))
-	table.append(Schedule('CarsonAir', 672,	'Portland','New York',	'1:25 PM', '8:36 PM','Scheduled'))	
+	table.append(Schedule('CarsonAir', 672,	'Portland','New York',	'1:25 PM', '8:36 PM','Scheduled'))
 	return table
-	
+
 def getSchedule(param, value):
   result =[]
   for x in table:
@@ -62,18 +62,18 @@ def getSchedule(param, value):
       result.append(x)
   return result
 
-def getSchedule1(paramVal):		
-    result =[]		   
-    for x in table:		
-     val = True		 
-     for i in paramVal:		
-       if (getattr(x, i[0]) != i[1]):		
-         val = False		
-         break		
-     if (val):		
-        result.append(x)		       
-    return result	
-	
+def getSchedule1(paramVal):
+    result =[]
+    for x in table:
+     val = True
+     for i in paramVal:
+       if (getattr(x, i[0]) != i[1]):
+         val = False
+         break
+     if (val):
+        result.append(x)
+    return result
+
 def printTable():
 	for x in table:
 		x.printSchedule()
@@ -111,7 +111,7 @@ def makeWebhookResult(req):
       flightnumber = parameters.get("flightnumber")
 
       x = (getSchedule("flightnumber", int(flightnumber)))
-      
+
       if (x):
         x = x[0]
         speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
@@ -126,10 +126,10 @@ def makeWebhookResult(req):
       parameters = result.get("parameters")
       flightnumber = parameters.get("flightnumber")
       x = (getSchedule("flightnumber", int(flightnumber)))
-      
+
       if (x):
         x = x[0]
-        speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) 
+        speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime)
       else:
         speech = "cannot find that flight " + str(flightnumber)
       print("Response:")
@@ -141,10 +141,10 @@ def makeWebhookResult(req):
       parameters = result.get("parameters")
       flightnumber = parameters.get("flightnumber")
       x = (getSchedule("flightnumber", int(flightnumber)))
-      
+
       if (x):
         x = x[0]
-        speech = str(x.airline) + " flight "+ str(x.flightnumber) +" is expected to arrive at "+ str(x.ArrivalCity) + " at " + str(x.ArrivalTime) 
+        speech = str(x.airline) + " flight "+ str(x.flightnumber) +" is expected to arrive at "+ str(x.ArrivalCity) + " at " + str(x.ArrivalTime)
       else:
         speech = "cannot find that flight " + str(flightnumber)
       print("Response:")
@@ -157,23 +157,23 @@ def makeWebhookResult(req):
       flightnumber = parameters.get("flightnumber")
 
       x = (getSchedule("flightnumber", int(flightnumber)))
-      
+
       if (x):
         x = x[0]
         x1 = getDuration(x)
-        speech = str(x.airline) + " flight "+ str(x.flightnumber) +" flies for  " + str(x1) 
+        speech = str(x.airline) + " flight "+ str(x.flightnumber) +" flies for  " + str(x1)
       else:
         speech = "cannot find that flight " + str(flightnumber)
       print("Response:")
       print(speech)
-    
+
     if reqAction =="flightsBetween":
       foundIntent = True
       result = req.get("result")
       parameters = result.get("parameters")
       departcity = parameters.get("Departure_City")
       arrivecity = parameters.get("Arrival_City")
-      
+
       x = (getSchedule1([["DepartureCity", departcity],["ArrivalCity", arrivecity]]))
       if (x):
         speech = "The flights available are:"
@@ -183,9 +183,9 @@ def makeWebhookResult(req):
         speech = "There are no direct flights in our database between the cities you asked"
       print("Response:")
       print(speech)
-      
+
     if (foundIntent):
-      
+
       return {
           "speech": speech,
           "displayText": speech,
@@ -193,16 +193,22 @@ def makeWebhookResult(req):
           # "contextOut": [],
           "source": "flightAgent"
       }
-      
+
     else:
-      return {}
-    
-    
-    
+      return {
+          "speech": "Error occured",
+          "displayText": "Error occured",
+          #"data": {},
+          # "contextOut": [],
+          "source": "flightAgent"
+      }
+
+
+
 table =[]
 if __name__ == '__main__':
     makeTable()
-   
+
     port = int(os.getenv('PORT', 5000))
 
     print ("Starting app on port %d" % port)
