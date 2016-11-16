@@ -11,43 +11,6 @@ from flask import make_response
 # Flask app should start in global layout
 app = Flask(__name__)
 
-conn = sqlite3.connect(':memory:')
-flight_schedule_data = [
-    ('ajaxair', '113', 'portland', '08:03', 'atlanta', '12:51', 'landed', ''),
-    ('ajaxair', '114', 'atlanta', '14:05', 'portland', '16:44', 'boarding', ''),
-    ('bakerair', '121', 'atlanta', '17:14', 'new york city', '19:20', 'departed', ''),
-    ('bakerair', '122', 'new york city', '21:00', 'portland', '00:13', 'scheduled', ''),
-    ('bakerair', '124', 'portland', '09:03', 'atlanta', '12:52', 'delayed', '09:55'),
-    ('carsonair', '522', 'portland', '14:15', 'new york city', '16:58', 'scheduled', ''),
-    ('carsonair', '679', 'new york city', '09:30', 'atlanta', '11:30', 'departed', ''),
-    ('carsonair', '670', 'new york city', '09:30', 'portland', '12:05', 'departed', ''),
-    ('carsonair', '671', 'atlanta', '13:20', 'new york city', '14:55', 'scheduled', ''),
-    ('carsonair', '672', 'portland', '13:25', 'new york city', '20:36', 'scheduled', '')]
-
-valid_data = { 
-    'airlines': {'ajaxair', 'bakerair', 'carsonair'},
-    'cities': {'portland', 'atlanta', 'new york city'},
-    'status': {'landed', 'boarding', 'departed', 'scheduled', 'delayed'}
-    }
-
-
-
-    
-c = conn.cursor()
-c.execute('''create table flightSchedule(
-  airline TEXT,
-  flight_number INTEGER,
-  departure_city TEXT,
-  arrival_city TEXT,
-  departure_time TEXT,
-  arrival_time TEXT,
-  status TEXT,
-  delay_time TEXT,
-  primary key(airline, flight_number)  
-  );''')	
-conn.commit()
-c.executemany('insert into flightSchedule values (?,?,?,?,?,?,?,?)', flight_schedule_data)
-  
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
@@ -64,7 +27,33 @@ def webhook():
     r.headers['Content-Type'] = 'application/json'
     return r
 
-  
+class Schedule():
+	def __init__ (self, airline, flightnumber, DepartureCity, ArrivalCity, DepartureTime, ArrivalTime, Status):
+		self.airline = airline
+		self.flightnumber = flightnumber
+		self.DepartureCity = DepartureCity
+		self.ArrivalCity = ArrivalCity
+		self.DepartureTime = DepartureTime
+		self.ArrivalTime = ArrivalTime
+		self.Status = Status
+	def printSchedule(self):
+		print (self.airline, self.flightnumber, self.DepartureCity, self.ArrivalCity, self.DepartureTime, self.ArrivalTime, self.Status)
+
+
+def makeTable():
+	#table = []
+	table.append(Schedule('AjaxAir', 113, 'Portland', 'Atlanta', '8:03 AM', '12:51 PM', 'Landed'))    
+	table.append(Schedule('AjaxAir',114, 'Atlnata', 'Portland', '2:05 PM', '4:44 PM', 'Boarding'))
+	table.append(Schedule('BakerAir', 121, 'Atlanta', 'New York', '5:14 PM', '7:20 PM', 'Departed'))
+	table.append(Schedule('BakerAir', 122, 'New York', 'Portland', '9:00 PM', '12:13 AM', 'Scheduled'))
+	table.append(Schedule('BakerAir', 124,	'Portland', 'Atlanta','9:03 AM', '12:52 PM' ,'Delayed to 9:55'))
+	table.append(Schedule('CarsonAir', 522,	'Portland', 'New York', '2:15 PM', '4:58 PM', 'Scheduled'))
+	table.append(Schedule('CarsonAir', 679,	'New York', 'Atlanta', '9:30 AM', '11:30 AM','Departed'))	
+	table.append(Schedule('CarsonAir', 670,	'New York', 'Portland', '9:30 AM', '12:05 PM',	'Departed'))	
+	table.append(Schedule('CarsonAir', 671,	'Atlanta', 'New York',	'1:20 PM','2:55 PM'	,'Scheduled'))
+	table.append(Schedule('CarsonAir', 672,	'Portland','New York',	'1:25 PM', '8:36 PM','Scheduled'))	
+	return table
+	
 def getSchedule(param, value):
   result =[]
   for x in table:
@@ -82,20 +71,18 @@ def makeWebhookResult(req):
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    flightnumber = parameters.get("FlightNumber")
-   # print(result)
-#    x = (getSchedule("flightnumber", flightnumber))
-    c.execute('''select airline,flight_number from flightSchedule where flight_number=? ''', (flightnumber,))
-    x= c.fetchall()
+    flightnumber = parameters.get("flightnumber")
+
+    x = (getSchedule("flightnumber", flightnumber))
+    
     if (x):
       x = x[0]
-      speech = ('{} flight {} '.format(*x) ) #str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
+      speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
     else:
       speech = "cannot find that flight" + str(flightnumber)
-    #speech = "i got u"
-    #print ("you asked for flight "+str(flightnumber) )
-    #speech = "hi"
+    print ("you asked for flight "+str(flightnumber) )
     print("Response:")
+    print (result)
     print(speech)
 
     return {
@@ -108,7 +95,7 @@ def makeWebhookResult(req):
 
 table =[]
 if __name__ == '__main__':
-    #makeTable()
+    makeTable()
     #printTable()
     #flightnumber =123
     #schedule = getSchedule("flightnumber", flightnumber)
