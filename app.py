@@ -196,12 +196,6 @@ def makeWebhookResult(req):
 
     else:
       return {
-          speech = "Error occured"
-          "speech": speech,
-          "displayText": speech,
-          #"data": {},
-          # "contextOut": [],
-          "source": "flightAgent"
       }
 
 
