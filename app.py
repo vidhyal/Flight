@@ -180,8 +180,8 @@ def makeWebhookResult(req):
       parameters = result.get("parameters")
       flightnumber = parameters.get("flightnumber")
 
-      x1 = (getSchedule("flightnumber", int(flightnumber)))
-
+      #x1 = (getSchedule("flightnumber", int(flightnumber)))
+      x1= table
       if (x1):
         speech = "The flights scheduled today are:"
         for x in x1:
