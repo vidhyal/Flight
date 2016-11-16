@@ -110,8 +110,8 @@ def makeWebhookResult(req):
       #  speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.status)
       #else:
       #  speech = "cannot find that flight" + str(flightnumber)
-     speech = "new hi"
-     print("Response:")
+      speech = "new hi"
+      print("Response:")
       print(speech)
     if (foundIntent):
       
