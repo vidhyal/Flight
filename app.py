@@ -71,7 +71,7 @@ def makeWebhookResult(req):
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    flightnumber = parameters.get("flightnumber")
+    flightnumber = parameters.get("FlightNumber")
 
     x = (getSchedule("flightnumber", flightnumber))
     
