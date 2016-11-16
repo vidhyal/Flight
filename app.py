@@ -77,13 +77,14 @@ def makeWebhookResult(req):
     result = req.get("result")
     parameters = result.get("parameters")
     flightnumber = parameters.get("FlightNumber")
-    airline = null
-    if (parameters.has("Airline")):
-	airline = parameters.get("Airline")
-    if (airline is None):
-    	x = (getSchedule([["flightnumber", int(flightnumber)]]))
-    else:
-	x = (getSchedule([["flightnumber", int(flightnumber)], ["airline", airline]]))
+    print(str(parameters))
+    #airline = null
+    #if (parameters.has("Airline")):
+	#airline = parameters.get("Airline")
+    #if (airline is None):
+    #	x = (getSchedule([["flightnumber", int(flightnumber)]]))
+    #else:
+    x = (getSchedule([["flightnumber", int(flightnumber)], ["airline", airline]]))
     if (x):
       x = x[0]
       speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
