@@ -119,6 +119,7 @@ def makeWebhookResult(req):
         speech = "cannot find that flight " + str(flightnumber)
       print("Response:")
       print(speech)
+
     if reqAction == "getDepartureTime":
       foundIntent= True
       result = req.get("result")
@@ -133,6 +134,7 @@ def makeWebhookResult(req):
         speech = "cannot find that flight " + str(flightnumber)
       print("Response:")
       print(speech)
+
     if reqAction == "getArrivalTime":
       foundIntent= True
       result = req.get("result")
@@ -147,6 +149,7 @@ def makeWebhookResult(req):
         speech = "cannot find that flight " + str(flightnumber)
       print("Response:")
       print(speech)
+
     if reqAction == "getTraveltime":
       foundIntent= True
       result = req.get("result")
@@ -163,6 +166,7 @@ def makeWebhookResult(req):
         speech = "cannot find that flight " + str(flightnumber)
       print("Response:")
       print(speech)
+
     if (foundIntent):
       
       return {
