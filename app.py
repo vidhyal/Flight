@@ -111,7 +111,7 @@ def makeWebhookResult(req):
         speech = "cannot find that flight " + str(flightnumber)
       print("Response:")
       print(speech)
-    if reqAction == "getDepartureTime"
+    if reqAction == "getDepartureTime":
       foundIntent= True
       result = req.get("result")
       parameters = result.get("parameters")
