@@ -166,7 +166,24 @@ def makeWebhookResult(req):
         speech = "cannot find that flight " + str(flightnumber)
       print("Response:")
       print(speech)
-
+    
+    if reqAction =="flightsBetween":
+      foundIntent = True
+      result = req.get("result")
+      parameters = result.get("parameters")
+      departcity = parameters.get("Departure_City")
+      arrivecity = parameters.get("Arrival_City")
+      
+      x = (getSchedule1([["DepartureCity", departcity],["ArrivalCity", arrivecity]]))
+      if (x):
+        speech = "The flights available are:"
+        for i in x:
+          speech += str(i.airline) + " flight " + str(i.flightnumber)+ " departs " +str(i.DepartureCity)+" at " + str(i.DepartureTime) + " and reaches " +str(i.ArriveCity) + " at " + str(i.ArriveTime) +". ""
+      else:
+        speech = "There are no direct flights in our database between the cities you asked"
+      print("Response:")
+      print(speech)
+      
     if (foundIntent):
       
       return {
