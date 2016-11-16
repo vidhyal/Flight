@@ -54,15 +54,10 @@ def makeTable():
 	table.append(Schedule('CarsonAir', 672,	'Portland','New York',	'1:25 PM', '8:36 PM','Scheduled'))	
 	return table
 	
-def getSchedule(paramVal):
+def getSchedule(param, value):
   result =[]
   for x in table:
-    val = True
-    for i in paramVal:
-      if (getattr(x, i[0]) != i[1]):
-        val = False
-        break
-    if (val):
+    if (getattr(x, param) == value):
       result.append(x)
   return result
   
