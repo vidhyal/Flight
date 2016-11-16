@@ -73,7 +73,7 @@ def makeWebhookResult(req):
     parameters = result.get("parameters")
     flightnumber = parameters.get("FlightNumber")
 
-    x = (getSchedule("flightnumber", flightnumber))
+    x = (getSchedule("flightnumber", int(flightnumber)))
     
     if (x):
       x = x[0]
