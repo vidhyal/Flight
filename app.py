@@ -89,6 +89,7 @@ def getTraveltime (sch):
 def makeWebhookResult(req):
     foundIntent = False
     reqAction = req.get("result").get("action")
+
     if reqAction == "getStatus":
       foundIntent= True
       result = req.get("result")
@@ -104,6 +105,7 @@ def makeWebhookResult(req):
       #speech = "new hi"
       print("Response:")
       print(speech)
+
     if reqAction == "getSchedule":
       foundIntent= True
       result = req.get("result")
@@ -160,7 +162,7 @@ def makeWebhookResult(req):
 
       if (x):
         x = x[0]
-        x1 = getDuration(x)
+        x1 = getTraveltime(x)
         speech = str(x.airline) + " flight "+ str(x.flightnumber) +" flies for  " + str(x1)
       else:
         speech = "cannot find that flight " + str(flightnumber)
