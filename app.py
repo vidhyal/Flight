@@ -228,6 +228,25 @@ def makeWebhookResult(req):
       print("Response:")
       print(speech)
 
+    if reqAction =="getLongestBetween"  :
+      foundIntent = True
+      result = req.get("result")
+      parameters = result.get("parameters")
+      departcity = parameters.get("Departure_city")
+      arrivecity = parameters.get("Arrival_City")
+      
+      departcity = getCityFrom(departcity)
+      arrivecity = getCityFrom(arrivecity)
+      x = (getSchedule1([["DepartureCity", departcity],["ArrivalCity", arrivecity]]))
+      x1,tt = getLongest(x)
+      if (x1):
+        speech = "The longest flight from :" + str(x1.DepartureCity) +" to " +str(x1.ArrivalCity) +" is "+ str(x1.airline) +" flight "+ str(x1.flightnumber)+". It takes "+ str(tt)
+      else:
+        speech = "There are no direct flights in our database between the cities you asked"
+      #speech = str(departcity)+ " " + str(arrivecity)
+      print("Response:")
+      print(speech)
+
     
     if (foundIntent):
 
