@@ -54,10 +54,15 @@ def makeTable():
 	table.append(Schedule('CarsonAir', 672,	'Portland','New York',	'1:25 PM', '8:36 PM','Scheduled'))	
 	return table
 	
-def getSchedule(param, value):
+def getSchedule(paramVal):
   result =[]
   for x in table:
-    if (getattr(x, param) == value):
+    val = True
+    for i in paramVal:
+      if (getattr(x, i[0]) != i[1]):
+        val = False
+        break
+    if (val):
       result.append(x)
   return result
   
@@ -72,9 +77,13 @@ def makeWebhookResult(req):
     result = req.get("result")
     parameters = result.get("parameters")
     flightnumber = parameters.get("FlightNumber")
-
-    x = (getSchedule("flightnumber", int(flightnumber)))
-    
+    airline = null
+    if (parameters.has("Airline")):
+	airline = parameters.get("Airline")
+    if (airline is None):
+    	x = (getSchedule([["flightnumber", int(flightnumber)]]))
+    else:
+	x = (getSchedule([["flightnumber", int(flightnumber)], ["airline", airline]]))
     if (x):
       x = x[0]
       speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
