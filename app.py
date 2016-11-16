@@ -31,20 +31,7 @@ valid_data = {
     }
 
 
-@app.route('/webhook', methods=['POST'])
-def webhook():
-    req = request.get_json(silent=True, force=True)
 
-    print("Request:")
-    print(json.dumps(req, indent=4))
-
-    res = makeWebhookResult(req)
-
-    res = json.dumps(res, indent=4)
-    print(res)
-    r = make_response(res)
-    r.headers['Content-Type'] = 'application/json'
-    return r
     
 c = conn.cursor()
 c.execute('''create table flightSchedule(
@@ -61,6 +48,22 @@ c.execute('''create table flightSchedule(
 conn.commit()
 c.executemany('insert into flightSchedule values (?,?,?,?,?,?,?,?)', flight_schedule_data)
   
+
+@app.route('/webhook', methods=['POST'])
+def webhook():
+    req = request.get_json(silent=True, force=True)
+
+    print("Request:")
+    print(json.dumps(req, indent=4))
+
+    res = makeWebhookResult(req)
+
+    res = json.dumps(res, indent=4)
+    print(res)
+    r = make_response(res)
+    r.headers['Content-Type'] = 'application/json'
+    return r
+
   
 def getSchedule(param, value):
   result =[]
@@ -79,8 +82,8 @@ def makeWebhookResult(req):
         return {}
     result = req.get("result")
     parameters = result.get("parameters")
-    flightnumber = parameters.get("flightnumber")
-
+    flightnumber = parameters.get("FlightNumber")
+    print(result)
 #    x = (getSchedule("flightnumber", flightnumber))
     c.execute('''select* from flightSchedule where flight_number=? ''', flightnumber)
     x= c.fetchall()
