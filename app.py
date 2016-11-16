@@ -205,7 +205,7 @@ def makeWebhookResult(req):
       
       departcity = getCityFrom(departcity)
       arrivecity = getCityFrom(arrivecity)
-      x = (getSchedule1([["DepartureCity", departcity],["ArrivalCity", arrivecity]]))
+      #x = (getSchedule1([["DepartureCity", departcity],["ArrivalCity", arrivecity]]))
       #if (x):
        # speech = "The flights available are:"
         #for i in x:
