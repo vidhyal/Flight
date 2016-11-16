@@ -174,6 +174,24 @@ def makeWebhookResult(req):
       print("Response:")
       print(speech)
 
+    if reqAction == "getAllSchedule":
+      foundIntent= True
+      result = req.get("result")
+      parameters = result.get("parameters")
+      flightnumber = parameters.get("flightnumber")
+
+      x1 = (getSchedule("flightnumber", int(flightnumber)))
+
+      if (x1):
+        speech = "The flights scheduled today are:"
+        for x in x1:
+          speech += str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)+"."
+      else:
+        speech = "cannot find that flight " + str(flightnumber)
+      print("Response:")
+      print(speech)
+      
+      
     if reqAction == "getDepartureTime":
       foundIntent= True
       result = req.get("result")
