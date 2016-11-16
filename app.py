@@ -7,6 +7,7 @@ import sqlite3
 from flask import Flask
 from flask import request
 from flask import make_response
+from datetime import datetime
 
 # Flask app should start in global layout
 app = Flask(__name__)
@@ -77,6 +78,13 @@ def printTable():
 	for x in table:
 		x.printSchedule()
 
+def getTraveltime (sch):
+  initTime = datetime.strptime(sch.DepartureTime, '%I:%M%p')
+  finTime = dateTime.strpTime(sch.ArrivalTime, '%I:%M%p')
+  dur = finTime-initTime
+  dur = dur.seconds/60
+  duration = str(dur / 60 )+ " hrs  and "+str(dur % 60) +"mins"
+  return duration
 
 def makeWebhookResult(req):
     foundIntent = False
@@ -126,6 +134,22 @@ def makeWebhookResult(req):
         speech = "cannot find that flight " + str(flightnumber)
       print("Response:")
       print(speech)
+    if reqAction == "getTraveltime":
+      foundIntent= True
+      result = req.get("result")
+      parameters = result.get("parameters")
+      flightnumber = parameters.get("flightnumber")
+
+      x = (getSchedule("flightnumber", int(flightnumber)))
+      
+      if (x):
+        x = x[0]
+        x1 = getDuration(x)
+        speech = str(x.airline) + " flight "+ str(x.flightnumber) +" flies for  " + str(x1) 
+      else:
+        speech = "cannot find that flight " + str(flightnumber)
+      print("Response:")
+      print(speech)
     if (foundIntent):
       
       return {
@@ -135,6 +159,7 @@ def makeWebhookResult(req):
           # "contextOut": [],
           "source": "flightAgent"
       }
+      
     else:
       return {}
     
