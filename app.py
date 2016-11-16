@@ -42,7 +42,7 @@ class Schedule():
 	def printSchedule(self):
 		print (self.airline, self.flightnumber, self.DepartureCity, self.ArrivalCity, self.DepartureTime, self.ArrivalTime, self.Status)
 
-
+cities = {'Atlanta', 'Portland', 'New York'}
 def makeTable():
 	#table = []
 	table.append(Schedule('AjaxAir', 113, 'Portland', 'Atlanta', '8:03AM', '12:51PM', 'Landed'))
@@ -76,6 +76,12 @@ def getSchedule1(paramVal):
         result.append(x)
     return result
 
+ def getCityFrom(cityStr):
+  for city in cities:
+    if city in cityStr:
+      return city
+  return None
+    
 def printTable():
 	for x in table:
 		x.printSchedule()
@@ -196,7 +202,9 @@ def makeWebhookResult(req):
       parameters = result.get("parameters")
       departcity = parameters.get("Departure_City")
       arrivecity = parameters.get("Arrival_City")
-
+      
+      departcity = getCityFrom(departCity)
+      arrivecity = getCityFrom(arrivecity)
       x = (getSchedule1([["DepartureCity", departcity],["ArrivalCity", arrivecity]]))
       if (x):
         speech = "The flights available are:"
