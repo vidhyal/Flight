@@ -82,8 +82,8 @@ def getTraveltime (sch):
   initTime = datetime.strptime(sch.DepartureTime, '%I:%M%p')
   finTime = dateTime.strpTime(sch.ArrivalTime, '%I:%M%p')
   dur = finTime-initTime
-  dur = dur.seconds/60
-  duration = str(dur / 60 )+ " hrs  and "+str(dur % 60) +"mins"
+  dur = dur.seconds//60
+  duration = str(dur // 60 )+ " hrs  and "+str(dur % 60) +"mins"
   return duration
 
 def makeWebhookResult(req):
@@ -124,12 +124,25 @@ def makeWebhookResult(req):
       result = req.get("result")
       parameters = result.get("parameters")
       flightnumber = parameters.get("flightnumber")
-
       x = (getSchedule("flightnumber", int(flightnumber)))
       
       if (x):
         x = x[0]
         speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) 
+      else:
+        speech = "cannot find that flight " + str(flightnumber)
+      print("Response:")
+      print(speech)
+    if reqAction == "getArrivalTime":
+      foundIntent= True
+      result = req.get("result")
+      parameters = result.get("parameters")
+      flightnumber = parameters.get("flightnumber")
+      x = (getSchedule("flightnumber", int(flightnumber)))
+      
+      if (x):
+        x = x[0]
+        speech = str(x.airline) + " flight "+ str(x.flightnumber) +" is expected to arrive at "+ str(x.ArrivalCity) + " at " + str(x.ArrivalTime) 
       else:
         speech = "cannot find that flight " + str(flightnumber)
       print("Response:")
