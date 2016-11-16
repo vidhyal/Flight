@@ -60,7 +60,19 @@ def getSchedule(param, value):
     if (getattr(x, param) == value):
       result.append(x)
   return result
-  
+
+def getSchedule1(paramVal):		
+    result =[]		   
+    for x in table:		
+     val = True		 
+     for i in paramVal:		
+       if (getattr(x, i[0]) != i[1]):		
+         val = False		
+         break		
+     if (val):		
+        result.append(x)		       
+    return result	
+	
 def printTable():
 	for x in table:
 		x.printSchedule()
