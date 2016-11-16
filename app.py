@@ -83,7 +83,7 @@ def makeWebhookResult(req):
     result = req.get("result")
     parameters = result.get("parameters")
     flightnumber = parameters.get("FlightNumber")
-    print(result)
+   # print(result)
 #    x = (getSchedule("flightnumber", flightnumber))
     c.execute('''select* from flightSchedule where flight_number=? ''', flightnumber)
     x= c.fetchall()
