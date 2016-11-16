@@ -81,6 +81,22 @@ def printTable():
 def makeWebhookResult(req):
     foundIntent = False
     reqAction = req.get("result").get("action")
+    if reqAction == "getStatus":
+      foundIntent= True
+      result = req.get("result")
+      parameters = result.get("parameters")
+      flightnumber = parameters.get("FlightNumber")
+
+      x = (getSchedule("flightnumber", int(flightnumber)))
+      
+      if (x):
+        x = x[0]
+        speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.status)
+      else:
+        speech = "cannot find that flight" + str(flightnumber)
+      #speech = "new hi"
+      print("Response:")
+      print(speech)
     if reqAction == "getSchedule":
       foundIntent= True
       result = req.get("result")
@@ -97,23 +113,6 @@ def makeWebhookResult(req):
       print("Response:")
       print(speech)
 
-      
-    elif reqAction == "getStatus":
-      foundIntent= True
-      result = req.get("result")
-      parameters = result.get("parameters")
-      flightnumber = parameters.get("FlightNumber")
-
-      x = (getSchedule("flightnumber", int(flightnumber)))
-      
-      if (x):
-        x = x[0]
-        speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.status)
-      else:
-        speech = "cannot find that flight" + str(flightnumber)
-      #speech = "new hi"
-      print("Response:")
-      print(speech)
     if (foundIntent):
       
       return {
