@@ -93,7 +93,8 @@ def makeWebhookResult(req):
         speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
       else:
         speech = "cannot find that flight" + str(flightnumber)
-      
+      print("Response:")
+      print(speech)
 
       
     elif req.get("result").get("action") == "getStatus":
@@ -110,9 +111,10 @@ def makeWebhookResult(req):
       #else:
       #  speech = "cannot find that flight" + str(flightnumber)
      speech = "new hi"
-    if (foundIntent):
-      print("Response:")
+     print("Response:")
       print(speech)
+    if (foundIntent):
+      
       return {
           "speech": speech,
           "displayText": speech,
