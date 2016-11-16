@@ -15,6 +15,8 @@ app = Flask(__name__)
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
+    print("Response:")
+    print("Welcome to flight agent")
     req = request.get_json(silent=True, force=True)
 
     print("Request:")
