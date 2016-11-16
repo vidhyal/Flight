@@ -76,7 +76,7 @@ def getSchedule1(paramVal):
         result.append(x)
     return result
 
- def getCityFrom(cityStr):
+def getCityFrom(cityStr):
   for city in cities:
     if city in cityStr:
       return city
