@@ -1,6 +1,6 @@
 {
-  "name": "API.AI Flight Agent Webhook",
-  "description": "API.AI Flight Agent Webhook ",
+  "name": "API.AI FlierQuest Webhook",
+  "description": "API.AI FlierQuest Webhook ",
   "repository": "https://github.com/vidhyal/Flight",
   "logo": "http://xvir.github.io/img/apiai.png",
   "keywords": ["api.ai", "natural language"]
