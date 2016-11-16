@@ -1,0 +1,25 @@
+{
+  "id": "000f6e56-6b05-44d6-b2e8-da4b2c58958e",
+  "name": "Duration",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "fastest",
+      "synonyms": [
+        "fastest",
+        "quickest",
+        "shortest"
+      ]
+    },
+    {
+      "value": "longest",
+      "synonyms": [
+        "longest",
+        "slow",
+        "slowest"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

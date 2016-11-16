@@ -1,0 +1,138 @@
+{
+  "id": "d581467d-a8ff-4064-aeec-e45e52a802ff",
+  "name": "last flight to reach Portland",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "b77def59-c075-4a68-914c-002653b74627",
+      "data": [
+        {
+          "text": "last",
+          "alias": "Arrival_Time",
+          "meta": "@Arrival_Time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " to "
+        },
+        {
+          "text": "reach",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6b4dc08d-b5d7-40cd-8d28-8bc2dfa09f5b",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "last",
+          "alias": "Arrival_Time",
+          "meta": "@Arrival_Time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " to "
+        },
+        {
+          "text": "arrive",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": " in "
+        },
+        {
+          "text": "Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Status",
+          "name": "Status",
+          "value": "$Status",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Arrival_Time",
+          "name": "Arrival_Time",
+          "value": "$Arrival_Time",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "AjaxAir 114 is the last flight to reach portland"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

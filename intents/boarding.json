@@ -1,0 +1,118 @@
+{
+  "id": "1df1a06b-e73c-44c4-b5e3-eb051c1f97a5",
+  "name": "boarding",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "840c86ba-becb-4947-b53e-24ba08a650d5",
+      "data": [
+        {
+          "text": "Which "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " is currently "
+        },
+        {
+          "text": "boarding",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": " ?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0f800374-c36a-49e6-9a04-e9358611b2ef",
+      "data": [
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "boarding",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": " now?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "aea995d2-334d-4796-9f8b-1d98e0ea1de4",
+      "data": [
+        {
+          "text": "What "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " are "
+        },
+        {
+          "text": "boarding",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": " right now?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        },
+        {
+          "dataType": "@Status",
+          "name": "Status",
+          "value": "$Status",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "AjaxAir flight 114 from Atlanta to Portland is boarding right now"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

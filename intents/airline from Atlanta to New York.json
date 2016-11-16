@@ -1,0 +1,254 @@
+{
+  "id": "d69aa394-25d0-4ac0-b020-9039f9ac1a1f",
+  "name": "airline from Atlanta to New York",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "a5a4e42e-b461-4bab-a595-5dabcfe4ae8d",
+      "data": [
+        {
+          "text": "How can I get "
+        },
+        {
+          "text": "from Atlanta",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City1",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "c1ba651e-c94d-44c2-978a-ec872f7e5746",
+      "data": [
+        {
+          "text": "from Atlanta",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City1",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b889954e-1cda-4742-8039-5e3df5959222",
+      "data": [
+        {
+          "text": "Atlanta",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City1",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4b2448c3-2f33-4f54-8cde-9aa7b3024862",
+      "data": [
+        {
+          "text": "What are the "
+        },
+        {
+          "text": "flight options",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from Atlanta",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City1",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "73662206-0cb3-4da2-b3ce-cc7c71a15a6a",
+      "data": [
+        {
+          "text": "Atlanta",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City1",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "b95399a8-086c-457e-a502-cf32faa54753",
+      "data": [
+        {
+          "text": "find "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from Atlanta",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City1",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "56ea5a00-6948-4ecb-b824-9eb10dd74982",
+      "data": [
+        {
+          "text": "What "
+        },
+        {
+          "text": "airlines",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " fly "
+        },
+        {
+          "text": "from Atlanta",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City1",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "AtlantatoNewYork",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City1",
+          "value": "$Arrival_City1",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city",
+          "isList": false
+        },
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "BakerAir 121 and CarsonAir 671 fly from Atlanta to New York"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

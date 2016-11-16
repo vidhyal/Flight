@@ -1,0 +1,189 @@
+{
+  "id": "72da7260-8fc6-4cc6-b6c4-6b09b512d434",
+  "name": "Which airline has no direct flight from Portland to Atlanta?",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "8cf0363b-b4fc-4c7c-b47a-d6ec26a722fe",
+      "data": [
+        {
+          "text": "Which "
+        },
+        {
+          "text": "airline",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " has "
+        },
+        {
+          "text": "no",
+          "alias": "Negation",
+          "meta": "@Negation",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "direct",
+          "alias": "Way",
+          "meta": "@Way",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to Atlanta",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "84522189-f0be-42a9-b803-d1b20eee7f6f",
+      "data": [
+        {
+          "text": "Which "
+        },
+        {
+          "text": "airline",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " does "
+        },
+        {
+          "text": "not",
+          "alias": "Negation",
+          "meta": "@Negation",
+          "userDefined": true
+        },
+        {
+          "text": " have "
+        },
+        {
+          "text": "direct",
+          "alias": "Way",
+          "meta": "@Way",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to Atlanta",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": " ?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "dataType": "@Way",
+          "name": "Way",
+          "value": "$Way",
+          "isList": false
+        },
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        },
+        {
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city",
+          "isList": false
+        },
+        {
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City",
+          "isList": false
+        },
+        {
+          "dataType": "@Negation",
+          "name": "Negation",
+          "value": "$Negation",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "CarsonAir has no direct flight from Portland to Atlanta"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

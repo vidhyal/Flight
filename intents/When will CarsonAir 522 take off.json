@@ -1,0 +1,154 @@
+{
+  "id": "4411abf6-6499-420e-a411-91336477ea6c",
+  "name": "When will CarsonAir 522 take off",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "9b3a231f-6d5e-438c-a811-58568ec77965",
+      "data": [
+        {
+          "text": "When will "
+        },
+        {
+          "text": "CarsonAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "522",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "depart",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "417bb6fe-a549-464e-ba48-a6e25005680c",
+      "data": [
+        {
+          "text": "When will "
+        },
+        {
+          "text": "CarsonAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "522",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " take off"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f436fa4f-1f9b-452f-9aa9-e18ce8b7a282",
+      "data": [
+        {
+          "text": "CarsonAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "522",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "take off",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "dataType": "@flightnumber",
+          "name": "flightnumber",
+          "value": "$flightnumber",
+          "isList": false
+        },
+        {
+          "dataType": "@Status",
+          "name": "Status",
+          "value": "$Status",
+          "isList": false
+        },
+        {
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "CarsonAir flight 522 from Portland to New York is schedueld to depart at 2:15 PM"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

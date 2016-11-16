@@ -1,0 +1,141 @@
+{
+  "id": "adb4c63b-9425-4ec4-9d4c-a398d7e0236c",
+  "name": "landed",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "9b265ac1-72c4-4b2b-b9e9-34bef132f531",
+      "data": [
+        {
+          "text": "give me the "
+        },
+        {
+          "text": "landings",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "793b6186-8e10-4308-b962-ea5d3c67df55",
+      "data": [
+        {
+          "text": "What are the "
+        },
+        {
+          "text": "landings",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3bc36249-f5de-4cc4-932f-3cdb4044f103",
+      "data": [
+        {
+          "text": "Which "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "landed",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "69798492-455d-4244-84b0-4e3a6293bb62",
+      "data": [
+        {
+          "text": "what "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "landed",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "345f4235-0ff1-49bb-b1ac-89884fa49e4f",
+      "data": [
+        {
+          "text": "landings",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Status",
+          "name": "Status",
+          "value": "$Status",
+          "isList": false
+        },
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "AjaxAir flight 113 from Portland to Atlanta just landed"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

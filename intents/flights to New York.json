@@ -1,0 +1,211 @@
+{
+  "id": "425b335a-5bf8-4301-866a-c08b603ac59e",
+  "name": "flights to New York",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "efc3e6a1-6806-4246-a7ff-98d578e86b9f",
+      "data": [
+        {
+          "text": "I want to go "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e4b732a1-8d02-4220-8d10-bedb2abafe73",
+      "data": [
+        {
+          "text": "How do I get "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8d36ca72-08ac-4819-8bf6-2e8835e3c0b8",
+      "data": [
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "072af025-a485-43cf-ac7b-e08073d53391",
+      "data": [
+        {
+          "text": "What "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " fly "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "today",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a3bc1274-a27a-4489-ad81-43053c0971a7",
+      "data": [
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "into New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "a012f31c-2381-4f6c-8437-7ff293c87cc4",
+      "data": [
+        {
+          "text": "What "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "arrive",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "into New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "today",
+          "alias": "date",
+          "meta": "@sys.date",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        },
+        {
+          "dataType": "@Status",
+          "name": "Status",
+          "value": "$Status",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.date",
+          "name": "date",
+          "value": "$date",
+          "isList": false
+        },
+        {
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "BakerAir flight 121 and CarsonAir flight 671 fly from Atlanta to New York. CarsonAir flights 522 and 672 fly from Portland to New York."
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

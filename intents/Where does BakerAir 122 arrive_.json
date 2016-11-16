@@ -1,0 +1,135 @@
+{
+  "id": "71d997fa-5963-4fec-97a3-2ce1315bfa41",
+  "name": "Where does BakerAir 122 arrive?",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "62b225c2-e466-4c24-b1da-b7fd6e3ed718",
+      "data": [
+        {
+          "text": "Where",
+          "alias": "geo-city",
+          "meta": "@sys.geo-city",
+          "userDefined": true
+        },
+        {
+          "text": " does "
+        },
+        {
+          "text": "BakerAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "122",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "arrive",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9c9f285c-a3bf-4455-ab3a-426c78fca3a8",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "destination city",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "BakerAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "122",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "dataType": "@flightnumber",
+          "name": "flightnumber",
+          "value": "$flightnumber",
+          "isList": false
+        },
+        {
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.geo-city",
+          "name": "geo-city",
+          "value": "$geo-city",
+          "isList": false
+        },
+        {
+          "dataType": "@Status",
+          "name": "Status",
+          "value": "$Status",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "The destination for BakerAir 122 is Portland"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

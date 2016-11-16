@@ -1,0 +1,171 @@
+{
+  "id": "d55b1e92-7a66-4fb7-b7fd-d2023daffef4",
+  "name": "Most flights to \u0026 from New York",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "136fd486-ce65-4915-8832-f528cba8890e",
+      "data": [
+        {
+          "text": "maximum",
+          "alias": "Count",
+          "meta": "@Count",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6835e71c-9f6e-4f1c-8e3d-94d931a274d0",
+      "data": [
+        {
+          "text": "most",
+          "alias": "Count",
+          "meta": "@Count",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "afd5acb2-26ec-45f2-bc81-a5f9dec2dadd",
+      "data": [
+        {
+          "text": "most",
+          "alias": "Count",
+          "meta": "@Count",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " to and from "
+        },
+        {
+          "text": "New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "cfa13bb3-b39d-4d90-b0f0-c5eb90ae3976",
+      "data": [
+        {
+          "text": "Which "
+        },
+        {
+          "text": "Airlines",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " have "
+        },
+        {
+          "text": "Most",
+          "alias": "Count",
+          "meta": "@Count",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " to and from "
+        },
+        {
+          "text": "New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "MostNewYork",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "required": false,
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Count",
+          "name": "Count",
+          "value": "$Count",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "CarsonAir has most flights to and from New York"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

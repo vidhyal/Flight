@@ -1,0 +1,62 @@
+{
+  "id": "6d7d939b-e1fd-42df-b50a-395ab3bd1fc8",
+  "name": "Count",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "many",
+      "synonyms": [
+        "many",
+        "how many",
+        "number of"
+      ]
+    },
+    {
+      "value": "all",
+      "synonyms": [
+        "all",
+        "every",
+        "each"
+      ]
+    },
+    {
+      "value": "any",
+      "synonyms": [
+        "any",
+        "some",
+        "a"
+      ]
+    },
+    {
+      "value": "most",
+      "synonyms": [
+        "most",
+        "maximum",
+        "largest number of",
+        "maximum number of",
+        "max",
+        "max number of"
+      ]
+    },
+    {
+      "value": "least",
+      "synonyms": [
+        "least",
+        "least number of",
+        "minimum number of",
+        "minimum",
+        "smallest number of",
+        "min",
+        "min number of"
+      ]
+    },
+    {
+      "value": "fewest number of",
+      "synonyms": [
+        "fewest number of"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

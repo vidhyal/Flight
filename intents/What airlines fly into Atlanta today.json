@@ -1,0 +1,87 @@
+{
+  "id": "774ec422-f31a-43ad-bebf-89dfe6e6f0ca",
+  "name": "What airlines fly into Atlanta today",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "1c81e0be-5cbe-4a15-b73a-18c961832b38",
+      "data": [
+        {
+          "text": "What airlines can take me "
+        },
+        {
+          "text": "to Atlanta",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": true
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "067716db-0f17-48e8-8843-18587cf9ed33",
+      "data": [
+        {
+          "text": "Which airlines fly "
+        },
+        {
+          "text": "into Atlanta",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": true
+        },
+        {
+          "text": " today?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d22af2b9-1756-4b47-9489-20b2bc01ee10",
+      "data": [
+        {
+          "text": "What airlines fly "
+        },
+        {
+          "text": "into Atlanta",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": true
+        },
+        {
+          "text": " today?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City"
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "We have AjaxAir, BakerAir and CarsonAir flights flying into Atlanta today"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

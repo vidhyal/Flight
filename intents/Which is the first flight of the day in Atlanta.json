@@ -1,0 +1,134 @@
+{
+  "id": "e222e750-8573-48d5-b829-c0547ccd0dba",
+  "name": "Which is the first flight of the day in Atlanta",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "1bb7c449-6e58-44c1-96d8-deeaddcb4783",
+      "data": [
+        {
+          "text": "the "
+        },
+        {
+          "text": "first",
+          "alias": "Departure_time",
+          "meta": "@Departure_time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " in "
+        },
+        {
+          "text": "Atlanta",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "6f96c480-36c4-42d2-b68f-f4d9e3b1d2b9",
+      "data": [
+        {
+          "text": "First",
+          "alias": "Departure_time",
+          "meta": "@Departure_time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " at "
+        },
+        {
+          "text": "Atlanta",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "e3d17610-f0e6-4522-911c-bce20c9aa834",
+      "data": [
+        {
+          "text": "Which is the "
+        },
+        {
+          "text": "first",
+          "alias": "Departure_time",
+          "meta": "@Departure_time",
+          "userDefined": true
+        },
+        {
+          "text": " flight of the day in "
+        },
+        {
+          "text": "Atlanta",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "getFirst",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "required": true,
+          "dataType": "@Departure_time",
+          "name": "Departure_time",
+          "value": "$Departure_time"
+        },
+        {
+          "required": true,
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city"
+        },
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "CarsonAir 679 is the first flight at Atlanta"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

@@ -1,0 +1,64 @@
+{
+  "id": "e01e37f6-aaf7-4d1d-b466-d36694e55d9b",
+  "name": "Departure_city",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "departure city",
+      "synonyms": [
+        "departure city",
+        "departing city",
+        "source",
+        "source city",
+        "from where"
+      ]
+    },
+    {
+      "value": "from Portland",
+      "synonyms": [
+        "from Portland",
+        "Portland",
+        "Portland Oregon",
+        "from Portland Oregon",
+        "leaving Portland",
+        "depart Portland",
+        "departing Portland"
+      ]
+    },
+    {
+      "value": "Atlanta",
+      "synonyms": [
+        "Atlanta",
+        "from Atlanta",
+        "leaving Atlanta",
+        "depart Atlanta",
+        "departing Atlanta"
+      ]
+    },
+    {
+      "value": "from NewYork",
+      "synonyms": [
+        "from NewYork",
+        "from NYC",
+        "from New York City",
+        "from NY",
+        "leaving NYC",
+        "leaving NY",
+        "leaving New York",
+        "leaving New York City",
+        "departing New york",
+        "depart NY",
+        "depart NYC",
+        "depart New York City"
+      ]
+    },
+    {
+      "value": "from New York",
+      "synonyms": [
+        "from New York"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

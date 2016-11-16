@@ -1,0 +1,75 @@
+{
+  "id": "4dfa4642-1b89-4a21-875f-d8e9928f93f1",
+  "name": "flightnumber",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "113",
+      "synonyms": [
+        "113"
+      ]
+    },
+    {
+      "value": "114",
+      "synonyms": [
+        "114"
+      ]
+    },
+    {
+      "value": "121",
+      "synonyms": [
+        "121"
+      ]
+    },
+    {
+      "value": "122",
+      "synonyms": [
+        "122"
+      ]
+    },
+    {
+      "value": "124",
+      "synonyms": [
+        "124"
+      ]
+    },
+    {
+      "value": "522",
+      "synonyms": [
+        "522"
+      ]
+    },
+    {
+      "value": "679",
+      "synonyms": [
+        "679"
+      ]
+    },
+    {
+      "value": "670",
+      "synonyms": [
+        "670"
+      ]
+    },
+    {
+      "value": "671",
+      "synonyms": [
+        "671"
+      ]
+    },
+    {
+      "value": "672",
+      "synonyms": [
+        "672"
+      ]
+    },
+    {
+      "value": "flight number",
+      "synonyms": [
+        "flight number"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

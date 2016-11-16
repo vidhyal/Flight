@@ -1,0 +1,192 @@
+{
+  "id": "b96aa601-ccef-47e5-9d2f-d09af1f77459",
+  "name": "672 travelTime",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "6cda99e9-b124-4e99-87f0-2b7ed035b566",
+      "data": [
+        {
+          "text": "time to travel",
+          "alias": "duration",
+          "meta": "@sys.duration",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "672",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8dbd021d-1de1-47c0-9a55-7135baf75722",
+      "data": [
+        {
+          "text": "Duration",
+          "alias": "duration",
+          "meta": "@sys.duration",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "672",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3baebe02-c2ba-4f36-bbbd-abe283d929b6",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "duration",
+          "alias": "duration",
+          "meta": "@sys.duration",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "CarsonAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "672",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9b86592e-3a89-4c29-9494-125faa56a025",
+      "data": [
+        {
+          "text": "How long",
+          "alias": "duration",
+          "meta": "@sys.duration",
+          "userDefined": true
+        },
+        {
+          "text": " does "
+        },
+        {
+          "text": "CarsonAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "672",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " take?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bd7caef4-dd31-4d66-baa8-70de61f5c947",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "travel time",
+          "alias": "duration",
+          "meta": "@sys.duration",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "CarsonAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "672",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "672Duration",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@flightnumber",
+          "name": "flightnumber",
+          "value": "$flightnumber",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@sys.duration",
+          "name": "duration",
+          "value": "$duration",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "CarsonAir 672 flies for approximately 7 hours"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

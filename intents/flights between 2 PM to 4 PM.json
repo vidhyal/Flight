@@ -1,0 +1,178 @@
+{
+  "id": "27f27668-449c-4111-9c31-052f54fa813d",
+  "name": "flights between 2 PM to 4 PM",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "4b0afd00-fa00-46b6-be9e-77eec971a913",
+      "data": [
+        {
+          "text": "What "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "depart",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": " between "
+        },
+        {
+          "text": "1400",
+          "alias": "time",
+          "meta": "@sys.time",
+          "userDefined": true
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "1600",
+          "alias": "time1",
+          "meta": "@sys.time",
+          "userDefined": true
+        },
+        {
+          "text": " hours?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3be46882-35a1-4bf4-ae9a-077bf68ef7b8",
+      "data": [
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "departing",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": true
+        },
+        {
+          "text": " between "
+        },
+        {
+          "text": "2:00 PM",
+          "alias": "time",
+          "meta": "@sys.time",
+          "userDefined": false
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "4:00 PM",
+          "alias": "time1",
+          "meta": "@sys.time",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "37bee85a-9b27-4e6a-ac4b-7af620a98b07",
+      "data": [
+        {
+          "text": "What "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "depart",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": " between "
+        },
+        {
+          "text": "2:00 PM",
+          "alias": "time",
+          "meta": "@sys.time",
+          "userDefined": false
+        },
+        {
+          "text": " and "
+        },
+        {
+          "text": "4:00 PM",
+          "alias": "time1",
+          "meta": "@sys.time",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.time",
+          "name": "time",
+          "value": "$time",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.time",
+          "name": "time1",
+          "value": "$time1",
+          "isList": false
+        },
+        {
+          "dataType": "@Status",
+          "name": "Status",
+          "value": "$Status",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "AjaxAir 114 to Portland departs Atlanta at 2:05 PM. CarsonAir 522 flight to New York departs Portland at 2:15 PM."
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

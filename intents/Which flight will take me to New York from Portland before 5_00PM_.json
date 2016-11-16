@@ -1,0 +1,95 @@
+{
+  "id": "350e5250-0ae7-4b63-94c9-6868a23c9658",
+  "name": "Which flight will take me to New York from Portland before 5:00PM?",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "aaeb98e2-2eac-4711-b8aa-172f377a9aa4",
+      "data": [
+        {
+          "text": "Which "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": true
+        },
+        {
+          "text": " will take me "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " before "
+        },
+        {
+          "text": "5:00PM",
+          "alias": "time",
+          "meta": "@sys.time",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city",
+          "isList": true
+        },
+        {
+          "dataType": "@sys.time",
+          "name": "time",
+          "value": "$time",
+          "isList": false
+        },
+        {
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City",
+          "isList": true
+        },
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "The flights available are CarsonAir 552 to NewYork from Portland"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

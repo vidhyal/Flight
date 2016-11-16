@@ -1,0 +1,79 @@
+{
+  "id": "56ed9a4b-3c22-4580-9d6d-9e90eb7b8064",
+  "name": "What is the delay on BakerAir 124",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "c09a66d5-9340-46a4-a766-6a2f68540afc",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "delay",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": " on "
+        },
+        {
+          "text": "BakerAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "124",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "required": true,
+          "dataType": "@Status",
+          "name": "Status",
+          "value": "$Status",
+          "isList": false
+        },
+        {
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@flightnumber",
+          "name": "flightnumber",
+          "value": "$flightnumber",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Baker Air 124 is delayed by 52 mins and will now depart at 9:55 AM"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

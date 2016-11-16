@@ -1,0 +1,82 @@
+{
+  "id": "de57af21-8efe-40ad-acd2-bc2edf88acc9",
+  "name": "What are the departure times for all flights leaving Portland and flying to New York City today?",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "d8dc1b9e-95b1-4b39-a391-6425ee12dcee",
+      "data": [
+        {
+          "text": "What are the "
+        },
+        {
+          "text": "departure times",
+          "alias": "Departure_time",
+          "meta": "@Departure_time",
+          "userDefined": true
+        },
+        {
+          "text": " for all flights "
+        },
+        {
+          "text": "leaving Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": true
+        },
+        {
+          "text": " and flying "
+        },
+        {
+          "text": "to New York City",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": true
+        },
+        {
+          "text": " today?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City"
+        },
+        {
+          "dataType": "@Departure_time",
+          "name": "Departure_time",
+          "value": "$Departure_time",
+          "isList": false
+        },
+        {
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": [
+            "CarsonAir flight 522 to New York leaves Portland at 2:15 PM and CarsonAir flight 672 leaves Portland at 1:25 PM",
+            "CarsonAir flight 522 departs at 2:15 PM and CarsonAir flight 672 departs at 1:25 PM"
+          ]
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

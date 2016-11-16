@@ -1,0 +1,160 @@
+{
+  "id": "4a7cb0e1-51b8-4ab7-9d7d-6d16c835ad92",
+  "name": "What is the Source city for BakerAir 122?",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "0ff8edde-69f7-4189-b9a4-f8913a9fdb36",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "source",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "122",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bc72c247-23aa-4fd6-8837-622a46b27942",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "Source city",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "BakerAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "122",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f2a821bd-b860-413a-9346-7280d52f97d1",
+      "data": [
+        {
+          "text": "From where",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": true
+        },
+        {
+          "text": " does "
+        },
+        {
+          "text": "BakerAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "122",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "depart",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "required": false,
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@flightnumber",
+          "name": "flightnumber",
+          "value": "$flightnumber",
+          "isList": false
+        },
+        {
+          "dataType": "@Status",
+          "name": "Status",
+          "value": "$Status",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "New York is the source for BakerAir 122"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

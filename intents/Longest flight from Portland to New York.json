@@ -1,0 +1,181 @@
+{
+  "id": "d3c866ac-d688-49db-9ed8-a58ada395483",
+  "name": "Longest flight from Portland to New York",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "8f2a205d-e95a-4060-af31-d405aab5ad00",
+      "data": [
+        {
+          "text": "Longest",
+          "alias": "duration",
+          "meta": "@sys.duration",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "29207bac-a3ca-471e-badb-de45527d5d48",
+      "data": [
+        {
+          "text": "Which "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " takes the "
+        },
+        {
+          "text": "longest",
+          "alias": "duration",
+          "meta": "@sys.duration",
+          "userDefined": true
+        },
+        {
+          "text": " time "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8fca2b9b-6a3f-47f0-a44b-4700e00aa5ab",
+      "data": [
+        {
+          "text": "Which is the "
+        },
+        {
+          "text": "longest",
+          "alias": "duration",
+          "meta": "@sys.duration",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to New York",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@sys.duration",
+          "name": "duration",
+          "value": "$duration",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Carson Air 672 is the longest flight from Portland to New York and takes around 7 hours"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

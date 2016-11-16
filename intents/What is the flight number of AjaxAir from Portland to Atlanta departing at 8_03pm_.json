@@ -1,0 +1,125 @@
+{
+  "id": "618a9ed9-db69-415e-8812-a28918f58425",
+  "name": "What is the flight number of AjaxAir from Portland to Atlanta departing at 8:03pm?",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "f809a893-6b43-4daf-babd-36740cbb4542",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "flight number",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "AjaxAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to Atlanta",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "departing",
+          "alias": "Departure_time",
+          "meta": "@Departure_time",
+          "userDefined": false
+        },
+        {
+          "text": " at "
+        },
+        {
+          "text": "8:03pm",
+          "alias": "time",
+          "meta": "@sys.time",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        },
+        {
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city",
+          "isList": false
+        },
+        {
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City",
+          "isList": false
+        },
+        {
+          "dataType": "@Departure_time",
+          "name": "Departure_time",
+          "value": "$Departure_time",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.time",
+          "name": "time",
+          "value": "$time",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "113"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

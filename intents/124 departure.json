@@ -1,0 +1,445 @@
+{
+  "id": "cabed2bc-b73b-4aae-8cac-c4435e3831a3",
+  "name": "124 departure",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "798a1d64-1cc0-4589-8499-aa36ae6edd10",
+      "data": [
+        {
+          "text": "take off",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "124",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "0a2c530c-ca08-4946-8bb0-915427708c7c",
+      "data": [
+        {
+          "text": "When",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " is "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "124",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "departing",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "0ea773b1-7a7a-413b-ba2e-18671adcd125",
+      "data": [
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "124",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "take off",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3b903c39-b46e-4ffa-94cc-2a6cdf2e46eb",
+      "data": [
+        {
+          "text": "departure",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "124",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "9a7ba52c-d4a9-4817-9106-7298c8728478",
+      "data": [
+        {
+          "text": "Depart",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "124",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8dcf4f30-527a-41fc-9f73-cacfec6ac158",
+      "data": [
+        {
+          "text": "Departure",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "time",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " for "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "124",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "051fbba0-b27d-40fd-8800-7e3f1ec05362",
+      "data": [
+        {
+          "text": "Departure",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "124",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "43279868-9538-4556-8e79-4eb619e85d43",
+      "data": [
+        {
+          "text": "When will "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "124",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "take off",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "0704b52b-3f40-491e-a005-98f582e4e0e0",
+      "data": [
+        {
+          "text": "When",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " will "
+        },
+        {
+          "text": "BakerAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "124",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "Depart",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ca38c5d4-606b-430e-a4b8-7d17ed2b0712",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "departure",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "time",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "BakerAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "124",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c718c888-cb7c-43bc-850d-26ad149b2cbc",
+      "data": [
+        {
+          "text": "When",
+          "alias": "date-time",
+          "meta": "@sys.date-time",
+          "userDefined": true
+        },
+        {
+          "text": " is "
+        },
+        {
+          "text": "BakerAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "124",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "departing",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "124Departure",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@flightnumber",
+          "name": "flightnumber",
+          "value": "$flightnumber",
+          "isList": true
+        },
+        {
+          "required": true,
+          "dataType": "@Status",
+          "name": "Status",
+          "value": "$Status",
+          "isList": false
+        },
+        {
+          "required": false,
+          "dataType": "@sys.date-time",
+          "name": "date-time",
+          "value": "$date-time",
+          "isList": false
+        },
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "BakerAir 124 was scheduled to Depart Portland at 9:03 AM but is delayed to 9:55 AM"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

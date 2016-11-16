@@ -1,0 +1,162 @@
+{
+  "id": "4b2751b7-21ec-42aa-8440-e03bfbcdd802",
+  "name": "When will BakerAir 121 arrive?",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "fc47901c-12c9-48e1-8bff-8e468234ede0",
+      "data": [
+        {
+          "text": "When will "
+        },
+        {
+          "text": "BakerAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "121",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "arrive",
+          "alias": "Status1",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f31609ee-1e39-4f67-92c3-eeaeeb85ad8f",
+      "data": [
+        {
+          "text": "When is "
+        },
+        {
+          "text": "BakerAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "121",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "scheduled",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        },
+        {
+          "text": " to "
+        },
+        {
+          "text": "arrive",
+          "alias": "Status1",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f4a8fdc8-5193-40ea-8f92-12bafe2fb9a7",
+      "data": [
+        {
+          "text": "Arrival time",
+          "alias": "Arrival_Time",
+          "meta": "@Arrival_Time",
+          "userDefined": false
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "BakerAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "121",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Arrival_Time",
+          "name": "Arrival_Time",
+          "value": "$Arrival_Time",
+          "isList": false
+        },
+        {
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "dataType": "@flightnumber",
+          "name": "flightnumber",
+          "value": "$flightnumber",
+          "isList": false
+        },
+        {
+          "dataType": "@Status",
+          "name": "Status1",
+          "value": "$Status1",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Flight BakerAir 121 is schedueld to arrive at New York at 7:20 PM"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

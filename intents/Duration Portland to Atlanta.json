@@ -1,0 +1,141 @@
+{
+  "id": "463725a6-2cef-4d2f-a5d4-a9e58ed746fc",
+  "name": "Duration Portland to Atlanta",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "6393423e-495b-4cc0-8d07-361e26c1f5eb",
+      "data": [
+        {
+          "text": "How "
+        },
+        {
+          "text": "much time",
+          "alias": "duration",
+          "meta": "@sys.duration",
+          "userDefined": true
+        },
+        {
+          "text": " does a "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to Atlanta",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": " take?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "3f761a15-0653-4d8f-9f29-27699a201253",
+      "data": [
+        {
+          "text": "How "
+        },
+        {
+          "text": "long",
+          "alias": "duration",
+          "meta": "@sys.duration",
+          "userDefined": true
+        },
+        {
+          "text": " is a "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to Atlanta",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        },
+        {
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city",
+          "isList": false
+        },
+        {
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City",
+          "isList": false
+        },
+        {
+          "dataType": "@sys.duration",
+          "name": "duration",
+          "value": "$duration",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "A flight from Portland to Atlanta usually takes 13 to 14 hours"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

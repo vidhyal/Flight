@@ -1,0 +1,51 @@
+{
+  "id": "bb13c87b-aa11-4d03-9fc7-4f136e30c7fc",
+  "name": "Arrival_City",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Arrival City",
+      "synonyms": [
+        "Arrival City",
+        "Destination",
+        "Arriving City",
+        "Arriving Destination",
+        "Arriving City",
+        "to where",
+        "where",
+        "destination city"
+      ]
+    },
+    {
+      "value": "to New York",
+      "synonyms": [
+        "to New York",
+        "to New York City",
+        "to NYC",
+        "to NY",
+        "into New York",
+        "into NYC",
+        "into NY",
+        "into New York City"
+      ]
+    },
+    {
+      "value": "into Portland",
+      "synonyms": [
+        "into Portland",
+        "to Portland",
+        "to portland Oregon",
+        "into Portland Oregon"
+      ]
+    },
+    {
+      "value": "into Atlanta",
+      "synonyms": [
+        "into Atlanta",
+        "to Atlanta"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": true
+}

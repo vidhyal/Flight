@@ -1,0 +1,143 @@
+{
+  "id": "d324fee8-8100-4ec2-a64b-47bcd6712b23",
+  "name": "delays",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "ec868537-1381-4d5c-b19d-7a06ca8f2830",
+      "data": [
+        {
+          "text": "delays",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "39d2e5e7-aeb9-4c00-b2db-e0f032f0c077",
+      "data": [
+        {
+          "text": "Which flighst are "
+        },
+        {
+          "text": "delayed",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "05d32974-b997-4bff-9fd4-e8b8ca94b7f4",
+      "data": [
+        {
+          "text": "Are there any "
+        },
+        {
+          "text": "delays",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8657cfca-56c4-4755-982a-737a03774f89",
+      "data": [
+        {
+          "text": "what "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " are "
+        },
+        {
+          "text": "delayed",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "c28da203-2db0-46b8-ac5c-f126ef657a7a",
+      "data": [
+        {
+          "text": "What are the "
+        },
+        {
+          "text": "delays",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bb82d7f2-1ab6-423c-9ab7-1a499b47ad48",
+      "data": [
+        {
+          "text": "Give me the "
+        },
+        {
+          "text": "delays",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "getDelays",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Status",
+          "name": "Status",
+          "value": "$Status",
+          "isList": false
+        },
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "The BakerAir flight 124 from Portland to Atlanta is delayed from 9:03 to 9:55 AM"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

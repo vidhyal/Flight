@@ -1,0 +1,80 @@
+{
+  "id": "68a64537-fb33-49e1-935b-3ccf560aba41",
+  "name": "Which is the fastest way from New York to Portland ?",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "5e71f133-2eac-4dca-a4af-1267e117aa15",
+      "data": [
+        {
+          "text": "Which is the "
+        },
+        {
+          "text": "fastest",
+          "alias": "Duration",
+          "meta": "@Duration",
+          "userDefined": false
+        },
+        {
+          "text": " way "
+        },
+        {
+          "text": "from New York",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to Portland",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": " ?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Duration",
+          "name": "Duration",
+          "value": "$Duration",
+          "isList": false
+        },
+        {
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City",
+          "isList": false
+        },
+        {
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "CarsonAir 670 is the fastest flight from New York to Portland"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

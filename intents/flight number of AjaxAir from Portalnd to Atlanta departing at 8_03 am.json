@@ -1,0 +1,107 @@
+{
+  "id": "1ed542dd-fc3a-498c-98f5-ee6919990ede",
+  "name": " flight number of AjaxAir from Portalnd to Atlanta departing at 8:03 am",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "b756e801-107a-49c5-9eb2-cc325e160683",
+      "data": [
+        {
+          "text": " "
+        },
+        {
+          "text": "flight number",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": true
+        },
+        {
+          "text": " of "
+        },
+        {
+          "text": "AjaxAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city1",
+          "meta": "@Departure_city",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to Atlanta",
+          "alias": "Arrival_City1",
+          "meta": "@Arrival_City",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "departing at 8:03 am",
+          "alias": "Departure_time",
+          "meta": "@Departure_time",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "getFlightNumber",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Departure_time",
+          "name": "Departure_time",
+          "value": "$Departure_time"
+        },
+        {
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "dataType": "@Departure_city",
+          "name": "Departure_city1",
+          "value": "$Departure_city1",
+          "isList": false
+        },
+        {
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City1",
+          "value": "$Arrival_City1",
+          "isList": false
+        },
+        {
+          "dataType": "@flightnumber",
+          "name": "flightnumber",
+          "value": "$flightnumber",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "The flight number for AjaxAir flight from portland to Atlanta at 8:03 a.m. is 113"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

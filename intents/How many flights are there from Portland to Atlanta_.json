@@ -1,0 +1,215 @@
+{
+  "id": "789de73e-921d-41f7-a3e9-d65193213cc1",
+  "name": "How many flights are there from Portland to Atlanta?",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "d24213f1-a84e-48f8-b134-9ef660512063",
+      "data": [
+        {
+          "text": "In "
+        },
+        {
+          "text": "how many",
+          "alias": "Count",
+          "meta": "@Count",
+          "userDefined": false
+        },
+        {
+          "text": " ways can I directly get "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to Atlanta",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "fa6facfc-7541-4973-b578-dbd7976199ca",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "number of",
+          "alias": "Count",
+          "meta": "@Count",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to Atlanta",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "1fc80b21-f1d1-4173-8df3-96b38735f757",
+      "data": [
+        {
+          "text": "Number of",
+          "alias": "Count",
+          "meta": "@Count",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to Atlanta",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f861d6b7-31a0-4dc7-b50c-2529fe3b8285",
+      "data": [
+        {
+          "text": "How "
+        },
+        {
+          "text": "many",
+          "alias": "Count",
+          "meta": "@Count",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " are there "
+        },
+        {
+          "text": "from Portland",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to Atlanta",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City",
+          "isList": false
+        },
+        {
+          "required": false,
+          "dataType": "@Count",
+          "name": "Count",
+          "value": "$Count",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "There are two flights from Portland to Atlanta, AjaxAir 113 and BakerAir 124"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

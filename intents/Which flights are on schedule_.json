@@ -1,0 +1,65 @@
+{
+  "id": "6a91e317-f62a-4352-bde7-558e91251998",
+  "name": "Which flights are on schedule?",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "1b3deb67-af22-4872-981b-4044a56edbdd",
+      "data": [
+        {
+          "text": "Which "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " are on "
+        },
+        {
+          "text": "schedule",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        },
+        {
+          "dataType": "@Status",
+          "name": "Status",
+          "value": "$Status",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "The flights on schedule are BakerAir 122, CarsonAir 522, CarsonAir 671, CarsonAir 672"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

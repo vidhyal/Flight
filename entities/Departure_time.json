@@ -1,0 +1,42 @@
+{
+  "id": "5ac7827d-7dc6-424a-8e50-ac040cb7d67b",
+  "name": "Departure_time",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Departure time",
+      "synonyms": [
+        "Departure time",
+        "departing time",
+        "flight time",
+        "departing"
+      ]
+    },
+    {
+      "value": "8:03 am",
+      "synonyms": [
+        "8:03 am"
+      ]
+    },
+    {
+      "value": "departure times",
+      "synonyms": [
+        "departure times"
+      ]
+    },
+    {
+      "value": "next",
+      "synonyms": [
+        "next"
+      ]
+    },
+    {
+      "value": "first",
+      "synonyms": [
+        "first"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

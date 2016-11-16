@@ -1,0 +1,139 @@
+{
+  "id": "9d45bbfb-f4a4-4f71-8381-dd7ec1ad94e7",
+  "name": "What is the next flight  to Portland from NewYork",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "6ebf8d29-27d5-4074-b954-c658b56e7e67",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "next",
+          "alias": "Departure_time",
+          "meta": "@Departure_time",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": "  "
+        },
+        {
+          "text": "from New York",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "to Portland",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4302b699-326d-4c95-bf96-fb2c7dc7f7f8",
+      "data": [
+        {
+          "text": "What is the "
+        },
+        {
+          "text": "next",
+          "alias": "Departure_time",
+          "meta": "@Departure_time",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flight",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": "  "
+        },
+        {
+          "text": "to Portland",
+          "alias": "Arrival_City",
+          "meta": "@Arrival_City",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "from NewYork",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "nextFlight",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        },
+        {
+          "dataType": "@Arrival_City",
+          "name": "Arrival_City",
+          "value": "$Arrival_City",
+          "isList": false
+        },
+        {
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city",
+          "isList": false
+        },
+        {
+          "dataType": "@Departure_time",
+          "name": "Departure_time",
+          "value": "$Departure_time",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "The next flight from New York to Portland is BakerAir 122 scheduled to depart at 9:00 PM"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

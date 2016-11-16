@@ -1,0 +1,82 @@
+{
+  "id": "103017f1-4c6a-4c70-a27a-720abebfd579",
+  "name": "Is CarsonAir 671 on time ?",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "388d22fd-2d4b-46a6-9102-e70912235883",
+      "data": [
+        {
+          "text": "Is "
+        },
+        {
+          "text": "CarsonAir",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "671",
+          "alias": "flightnumber",
+          "meta": "@flightnumber",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "on time",
+          "alias": "Status",
+          "meta": "@Status",
+          "userDefined": true
+        },
+        {
+          "text": " ?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@flightnumber",
+          "name": "flightnumber",
+          "value": "$flightnumber",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Status",
+          "name": "Status",
+          "value": "$Status",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Yes. CarsonAir 671 is scheduled to depart Atlanta at 1:20 PM"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

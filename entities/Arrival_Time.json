@@ -1,0 +1,24 @@
+{
+  "id": "8bac6450-9d9a-46f7-98cf-9a89d9c37c81",
+  "name": "Arrival_Time",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "Arrival Time",
+      "synonyms": [
+        "Arrival Time",
+        "Landing Time",
+        "arriving time",
+        "arriving"
+      ]
+    },
+    {
+      "value": "last",
+      "synonyms": [
+        "last"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

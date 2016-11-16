@@ -1,0 +1,19 @@
+{
+  "id": "c5b57662-dcdb-4ef3-b23f-460aa8d78738",
+  "name": "Airline",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "airline",
+      "synonyms": [
+        "airline",
+        "airlines",
+        "ajaxAir",
+        "CarsonAir",
+        "BakerAir"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

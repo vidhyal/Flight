@@ -1,0 +1,23 @@
+{
+  "id": "e849e64e-9d9a-4ed6-b113-bf4dae342e33",
+  "name": "Way",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "direct",
+      "synonyms": [
+        "direct",
+        "straight",
+        "through"
+      ]
+    },
+    {
+      "value": "indirect",
+      "synonyms": [
+        "indirect"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

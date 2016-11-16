@@ -1,0 +1,120 @@
+{
+  "id": "b01f8032-8f4b-46e0-9d0e-4ef309d1c995",
+  "name": "Which airline has fewest number of flights?",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "d5edb8a7-2b52-4c01-9846-254cb319ee8b",
+      "data": [
+        {
+          "text": "Which "
+        },
+        {
+          "text": "airline",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " has "
+        },
+        {
+          "text": "fewest number of",
+          "alias": "Count",
+          "meta": "@Count",
+          "userDefined": true
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "d8b6b433-5d2a-4b7f-ae64-3c0e555cb10b",
+      "data": [
+        {
+          "text": "Which "
+        },
+        {
+          "text": "airline",
+          "alias": "Airline",
+          "meta": "@Airline",
+          "userDefined": false
+        },
+        {
+          "text": " has "
+        },
+        {
+          "text": "least number of",
+          "alias": "Count",
+          "meta": "@Count",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": "?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "leastFlight",
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "required": true,
+          "dataType": "@Airline",
+          "name": "Airline",
+          "value": "$Airline",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Count",
+          "name": "Count",
+          "value": "$Count",
+          "isList": false
+        },
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "AjaxAir"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

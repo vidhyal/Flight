@@ -1,0 +1,137 @@
+{
+  "id": "6b2c31ce-76b2-49d2-b150-1a4b211066be",
+  "name": "How many flights departing New York each day ",
+  "auto": true,
+  "contexts": [],
+  "userSays": [
+    {
+      "id": "e4b26e30-47fe-46dc-949c-b8f054cfb01b",
+      "data": [
+        {
+          "text": "How many",
+          "alias": "Count",
+          "meta": "@Count",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "departing New York",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "each",
+          "alias": "Count1",
+          "meta": "@Count",
+          "userDefined": false
+        },
+        {
+          "text": " day"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "4ccda6a4-5298-401d-8697-39a7b4f7bf71",
+      "data": [
+        {
+          "text": "How many",
+          "alias": "Count",
+          "meta": "@Count",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "flights",
+          "alias": "flights_available",
+          "meta": "@flights_available",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "leaving New York",
+          "alias": "Departure_city",
+          "meta": "@Departure_city",
+          "userDefined": false
+        },
+        {
+          "text": " "
+        },
+        {
+          "text": "each",
+          "alias": "Count1",
+          "meta": "@Count",
+          "userDefined": false
+        },
+        {
+          "text": " day"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "responses": [
+    {
+      "resetContexts": false,
+      "affectedContexts": [],
+      "parameters": [
+        {
+          "required": true,
+          "dataType": "@Count",
+          "name": "Count",
+          "value": "$Count",
+          "isList": false
+        },
+        {
+          "dataType": "@flights_available",
+          "name": "flights_available",
+          "value": "$flights_available",
+          "isList": false
+        },
+        {
+          "required": true,
+          "dataType": "@Departure_city",
+          "name": "Departure_city",
+          "value": "$Departure_city",
+          "isList": false
+        },
+        {
+          "dataType": "@Count",
+          "name": "Count1",
+          "value": "$Count1",
+          "isList": false
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "three flights depart from New York daily"
+        }
+      ]
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "fallbackIntent": false
+}

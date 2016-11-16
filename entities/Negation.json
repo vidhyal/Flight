@@ -1,0 +1,21 @@
+{
+  "id": "c521cd47-1f8d-49dd-9245-1736e597ec3b",
+  "name": "Negation",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "no",
+      "synonyms": [
+        "no"
+      ]
+    },
+    {
+      "value": "not",
+      "synonyms": [
+        "not"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
