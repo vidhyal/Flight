@@ -87,12 +87,12 @@ def makeWebhookResult(req):
 #    x = (getSchedule("flightnumber", flightnumber))
     c.execute('''select* from flightSchedule where flight_number=? ''', flightnumber)
     x= c.fetchall()
-    #if (x):
-     # x = x[0]
-      #speech = ('{} flight {} departs {} at {} and reaches {} at {}. It\'s status is{}'.format(*x) ) #str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
-    #else:
-     # speech = "cannot find that flight" + str(flightnumber)
-    speech = "i got u"
+    if (x):
+      x = x[0]
+      speech = ('{} flight {} departs {} at {} and reaches {} at {}. It\'s status is{}'.format(*x) ) #str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
+    else:
+      speech = "cannot find that flight" + str(flightnumber)
+    #speech = "i got u"
     print ("you asked for flight "+str(flightnumber) )
     print("Response:")
     print (result)
