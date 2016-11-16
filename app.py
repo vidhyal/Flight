@@ -131,7 +131,7 @@ def makeWebhookResult(req):
         x = x[0]
         speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime)
       else:
-        speech = "cannot find that flight " + str(flightnumber)
+        speech = "Cannot find that flight " + str(flightnumber)
       print("Response:")
       print(speech)
 
@@ -146,7 +146,7 @@ def makeWebhookResult(req):
         x = x[0]
         speech = str(x.airline) + " flight "+ str(x.flightnumber) +" is expected to arrive at "+ str(x.ArrivalCity) + " at " + str(x.ArrivalTime)
       else:
-        speech = "cannot find that flight " + str(flightnumber)
+        speech = "Cannot find that flight " + str(flightnumber)
       print("Response:")
       print(speech)
 
@@ -196,8 +196,9 @@ def makeWebhookResult(req):
 
     else:
       return {
-          "speech": "Error occured",
-          "displayText": "Error occured",
+          speech = "Error occured"
+          "speech": speech,
+          "displayText": speech,
           #"data": {},
           # "contextOut": [],
           "source": "flightAgent"
