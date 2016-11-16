@@ -178,7 +178,7 @@ def makeWebhookResult(req):
       if (x):
         speech = "The flights available are:"
         for i in x:
-          speech += str(i.airline) + " flight " + str(i.flightnumber)+ " departs " +str(i.DepartureCity)+" at " + str(i.DepartureTime) + " and reaches " +str(i.ArriveCity) + " at " + str(i.ArriveTime) +". ""
+          speech += str(i.airline) + " flight " + str(i.flightnumber)+ " departs " +str(i.DepartureCity)+" at " + str(i.DepartureTime) + " and reaches " +str(i.ArriveCity) + " at " + str(i.ArriveTime) +". "
       else:
         speech = "There are no direct flights in our database between the cities you asked"
       print("Response:")
