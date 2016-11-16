@@ -86,7 +86,7 @@ def makeWebhookResult(req):
       result = req.get("result")
       parameters = result.get("parameters")
       flightnumber = parameters.get("FlightNumber")
-      x = (getSchedule([["flightnumber", int(flightnumber)]]))
+      x = (getSchedule("flightnumber", int(flightnumber)))
       if (x):
         x = x[0]
         speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.Status)
