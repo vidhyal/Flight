@@ -79,32 +79,59 @@ def printTable():
 
 
 def makeWebhookResult(req):
-    if req.get("result").get("action") != "getSchedule":
-        return {}
-    result = req.get("result")
-    parameters = result.get("parameters")
-    flightnumber = parameters.get("FlightNumber")
+    if req.get("result").get("action") == "getSchedule":
+      
+      result = req.get("result")
+      parameters = result.get("parameters")
+      flightnumber = parameters.get("FlightNumber")
 
-    x = (getSchedule("flightnumber", int(flightnumber)))
+      x = (getSchedule("flightnumber", int(flightnumber)))
+      
+      if (x):
+        x = x[0]
+        speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
+      else:
+        speech = "cannot find that flight" + str(flightnumber)
+      print ("you asked for flight "+str(flightnumber) )
+      print("Response:")
+      print (result)
+      print(speech)
+
+      return {
+          "speech": speech,
+          "displayText": speech,
+          #"data": {},
+          # "contextOut": [],
+          "source": "flightAgent"
+      }
+    if req.get("result").get("action") == "getStatus":
+      
+      result = req.get("result")
+      parameters = result.get("parameters")
+      flightnumber = parameters.get("FlightNumber")
+
+      x = (getSchedule("flightnumber", int(flightnumber)))
+      
+      if (x):
+        x = x[0]
+        speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.status)
+      else:
+        speech = "cannot find that flight" + str(flightnumber)
+      print ("you asked for flight "+str(flightnumber) )
+      print("Response:")
+      print (result)
+      print(speech)
+
+      return {
+          "speech": speech,
+          "displayText": speech,
+          #"data": {},
+          # "contextOut": [],
+          "source": "flightAgent"
+      }
     
-    if (x):
-      x = x[0]
-      speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
-    else:
-      speech = "cannot find that flight" + str(flightnumber)
-    print ("you asked for flight "+str(flightnumber) )
-    print("Response:")
-    print (result)
-    print(speech)
-
-    return {
-        "speech": speech,
-        "displayText": speech,
-        #"data": {},
-        # "contextOut": [],
-        "source": "flightAgent"
-    }
-
+    
+    
 table =[]
 if __name__ == '__main__':
     makeTable()
