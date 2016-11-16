@@ -77,7 +77,7 @@ def makeWebhookResult(req):
     #if (parameters.has("Airline")):
 	#airline = parameters.get("Airline")
     #if (airline is None):
-    	x = (getSchedule([["flightnumber", int(flightnumber)]]))
+    	x = (getSchedule("flightnumber", int(flightnumber)))
     #else:
     #x = (getSchedule([["flightnumber", int(flightnumber)], ["airline", airline]]))
     if (x):
