@@ -183,9 +183,9 @@ def makeWebhookResult(req):
       #x1 = (getSchedule("flightnumber", int(flightnumber)))
       x1= table
       if (x1):
-        speech = "The flights scheduled today are:"
+        speech = "The flights scheduled today are:\n"
         for x in x1:
-          speech += str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)+"."
+          speech += str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)+".\n"
       else:
         speech = "cannot find that flight " + str(flightnumber)
       print("Response:")
