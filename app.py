@@ -43,16 +43,16 @@ class Schedule():
 
 def makeTable():
 	#table = []
-	table.append(Schedule('AjaxAir', 113, 'Portland', 'Atlanta', '8:03 AM', '12:51 PM', 'Landed'))
-	table.append(Schedule('AjaxAir',114, 'Atlanta', 'Portland', '2:05 PM', '4:44 PM', 'Boarding'))
-	table.append(Schedule('BakerAir', 121, 'Atlanta', 'New York', '5:14 PM', '7:20 PM', 'Departed'))
-	table.append(Schedule('BakerAir', 122, 'New York', 'Portland', '9:00 PM', '12:13 AM', 'Scheduled'))
-	table.append(Schedule('BakerAir', 124,	'Portland', 'Atlanta','9:03 AM', '12:52 PM' ,'Delayed to 9:55'))
-	table.append(Schedule('CarsonAir', 522,	'Portland', 'New York', '2:15 PM', '4:58 PM', 'Scheduled'))
-	table.append(Schedule('CarsonAir', 679,	'New York', 'Atlanta', '9:30 AM', '11:30 AM','Departed'))
-	table.append(Schedule('CarsonAir', 670,	'New York', 'Portland', '9:30 AM', '12:05 PM',	'Departed'))
-	table.append(Schedule('CarsonAir', 671,	'Atlanta', 'New York',	'1:20 PM','2:55 PM'	,'Scheduled'))
-	table.append(Schedule('CarsonAir', 672,	'Portland','New York',	'1:25 PM', '8:36 PM','Scheduled'))
+	table.append(Schedule('AjaxAir', 113, 'Portland', 'Atlanta', '8:03AM', '12:51PM', 'Landed'))
+	table.append(Schedule('AjaxAir',114, 'Atlanta', 'Portland', '2:05PM', '4:44PM', 'Boarding'))
+	table.append(Schedule('BakerAir', 121, 'Atlanta', 'New York', '5:14PM', '7:20PM', 'Departed'))
+	table.append(Schedule('BakerAir', 122, 'New York', 'Portland', '9:00PM', '12:13AM', 'Scheduled'))
+	table.append(Schedule('BakerAir', 124,	'Portland', 'Atlanta','9:03AM', '12:52PM' ,'Delayed to 9:55'))
+	table.append(Schedule('CarsonAir', 522,	'Portland', 'New York', '2:15PM', '4:58PM', 'Scheduled'))
+	table.append(Schedule('CarsonAir', 679,	'New York', 'Atlanta', '9:30AM', '11:30AM','Departed'))
+	table.append(Schedule('CarsonAir', 670,	'New York', 'Portland', '9:30AM', '12:05PM',	'Departed'))
+	table.append(Schedule('CarsonAir', 671,	'Atlanta', 'New York',	'1:20PM','2:55PM'	,'Scheduled'))
+	table.append(Schedule('CarsonAir', 672,	'Portland','New York',	'1:25PM', '8:36PM','Scheduled'))
 	return table
 
 def getSchedule(param, value):
@@ -81,7 +81,7 @@ def printTable():
 #there is a bug in this function
 def getTravelTime (sch):
   initTime = datetime.strptime(sch.DepartureTime, '%I:%M%p')
-  finTime = dateTime.strpTime(sch.ArrivalTime, '%I:%M%p')
+  finTime = datetime.strptime(sch.ArrivalTime, '%I:%M%p')
   dur = finTime-initTime
   dur = dur.seconds//60
   duration = str(dur // 60 ) + " hrs  and "+str(dur % 60) + "mins"
