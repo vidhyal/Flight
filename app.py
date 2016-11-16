@@ -200,7 +200,7 @@ def makeWebhookResult(req):
       foundIntent = True
       result = req.get("result")
       parameters = result.get("parameters")
-      departcity = parameters.get("Departure_City")
+      departcity = parameters.get("Departure_city")
       arrivecity = parameters.get("Arrival_City")
       
       departcity = getCityFrom(departcity)
