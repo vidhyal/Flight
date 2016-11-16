@@ -94,6 +94,19 @@ def getLongest(tab):
       strLong = x
   return tab[i], strLong
     
+def getShortest(tab):
+  Traveltime = {}
+  longest = 24*60*60
+  ind = 0
+  strLong = ""
+  for i in range (len(tab)):
+    x,tt = getTravelTime(tab[i])
+    if (tt<longest):
+      longest = tt
+      ind = i
+      strLong = x
+  return tab[i], strLong    
+
 def printTable():
 	for x in table:
 		x.printSchedule()
@@ -247,6 +260,25 @@ def makeWebhookResult(req):
       print("Response:")
       print(speech)
 
+      
+    if reqAction =="getShortestBetween"  :
+      foundIntent = True
+      result = req.get("result")
+      parameters = result.get("parameters")
+      departcity = parameters.get("Departure_city")
+      arrivecity = parameters.get("Arrival_City")
+      
+      departcity = getCityFrom(departcity)
+      arrivecity = getCityFrom(arrivecity)
+      x = (getSchedule1([["DepartureCity", departcity],["ArrivalCity", arrivecity]]))
+      x1,tt = getShortest(x)
+      if (x1):
+        speech = "The shortest flight from :" + str(x1.DepartureCity) +" to " +str(x1.ArrivalCity) +" is "+ str(x1.airline) +" flight "+ str(x1.flightnumber)+". It takes "+ str(tt)
+      else:
+        speech = "There are no direct flights in our database between the cities you asked"
+      #speech = str(departcity)+ " " + str(arrivecity)
+      print("Response:")
+      print(speech)  
     
     if (foundIntent):
 
@@ -267,9 +299,19 @@ def makeWebhookResult(req):
 table =[]
 if __name__ == '__main__':
     makeTable()
-    #departcity = getCityFrom('fromAtlanta')
-    #arrivecity = getCityFrom('to Portland')
-    
+    departcity = getCityFrom('fromAtlanta')
+    arrivecity = getCityFrom('to Portland')
+    departcity = getCityFrom(departcity)
+    arrivecity = getCityFrom(arrivecity)
+    x = (getSchedule1([["DepartureCity", departcity],["ArrivalCity", arrivecity]]))
+    x1,tt = getLongest(x)
+    if (x1):
+      speech = "The longest flight from :" + str(x1.DepartureCity) +" to " +str(x1.ArrivalCity) +" is "+ str(x1.airline) +" flight "+ str(x1.flightnumber)+". It takes "+ str(tt)
+    else:
+      speech = "There are no direct flights in our database between the cities you asked"
+    #speech = str(departcity)+ " " + str(arrivecity)
+    print("Response:")
+    print(speech)
     port = int(os.getenv('PORT', 5000))
 
     print ("Starting app on port %d" % port)
