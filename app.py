@@ -92,9 +92,7 @@ def makeWebhookResult(req):
         speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
       else:
         speech = "cannot find that flight" + str(flightnumber)
-      print ("you asked for flight "+str(flightnumber) )
       print("Response:")
-      print (result)
       print(speech)
 
       return {
@@ -117,9 +115,7 @@ def makeWebhookResult(req):
         speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.status)
       else:
         speech = "cannot find that flight" + str(flightnumber)
-      print ("you asked for flight "+str(flightnumber) )
       print("Response:")
-      print (result)
       print(speech)
 
       return {
