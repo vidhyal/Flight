@@ -80,7 +80,7 @@ def makeWebhookResult(req):
       speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
     else:
       speech = "cannot find that flight" + str(flightnumber)
-    
+    print ("you asked for flight "+str(flightnumber) )
     print("Response:")
     print(speech)
 
