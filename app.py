@@ -42,7 +42,7 @@ class Schedule():
 	def printSchedule(self):
 		print (self.airline, self.flightnumber, self.DepartureCity, self.ArrivalCity, self.DepartureTime, self.ArrivalTime, self.Status)
 
-cities = {'Atlanta', 'Portland', 'New York'}
+cities = ['Atlanta', 'Portland', 'New York']
 def makeTable():
 	#table = []
 	table.append(Schedule('AjaxAir', 113, 'Portland', 'Atlanta', '8:03AM', '12:51PM', 'Landed'))
