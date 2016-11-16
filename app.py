@@ -72,14 +72,9 @@ def makeWebhookResult(req):
     result = req.get("result")
     parameters = result.get("parameters")
     flightnumber = parameters.get("FlightNumber")
-    #print(str(parameters))
-    #airline = null
-    #if (parameters.has("Airline")):
-	#airline = parameters.get("Airline")
-    #if (airline is None):
-    	x = (getSchedule("flightnumber", int(flightnumber)))
-    #else:
-    #x = (getSchedule([["flightnumber", int(flightnumber)], ["airline", airline]]))
+
+    x = (getSchedule("flightnumber", int(flightnumber)))
+    
     if (x):
       x = x[0]
       speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
@@ -87,7 +82,7 @@ def makeWebhookResult(req):
       speech = "cannot find that flight" + str(flightnumber)
     print ("you asked for flight "+str(flightnumber) )
     print("Response:")
-    #print (result)
+    print (result)
     print(speech)
 
     return {
