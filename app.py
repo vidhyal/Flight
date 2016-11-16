@@ -78,12 +78,13 @@ def printTable():
 	for x in table:
 		x.printSchedule()
 
-def getTraveltime (sch):
+def getTravelTime (sch):
   initTime = datetime.strptime(sch.DepartureTime, '%I:%M%p')
   finTime = dateTime.strpTime(sch.ArrivalTime, '%I:%M%p')
   dur = finTime-initTime
   dur = dur.seconds//60
-  duration = str(dur // 60 )+ " hrs  and "+str(dur % 60) +"mins"
+  #duration = str(dur // 60 )+ " hrs  and "+str(dur % 60) +"mins"
+  duration = dur
   return duration
 
 def makeWebhookResult(req):
@@ -162,7 +163,7 @@ def makeWebhookResult(req):
 
       if (x):
         x = x[0]
-        x1 = getTraveltime(x)
+        x1 = getTravelTime(x)
         speech = str(x.airline) + " flight "+ str(x.flightnumber) +" flies for  " + str(x1)
       else:
         speech = "cannot find that flight " + str(flightnumber)
