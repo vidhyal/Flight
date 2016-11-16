@@ -10,8 +10,7 @@ from flask import make_response
 
 # Flask app should start in global layout
 app = Flask(__name__)
-print("Response:")
-print("Welcome to flight agent")
+
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
@@ -92,7 +91,8 @@ def makeWebhookResult(req):
         x = x[0]
         speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.Status)
       else:
-        speech = "cannot find that flight" + str(flightnumber)
+        #can't understand why this gives an error.
+        speech = "cannot find that flight " + str(flightnumber)
       #speech = "new hi"
       print("Response:")
       print(speech)
@@ -108,10 +108,24 @@ def makeWebhookResult(req):
         x = x[0]
         speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
       else:
-        speech = "cannot find that flight" + str(flightnumber)
+        speech = "cannot find that flight " + str(flightnumber)
       print("Response:")
       print(speech)
+    if reqAction == "getDepartureTime"
+      foundIntent= True
+      result = req.get("result")
+      parameters = result.get("parameters")
+      flightnumber = parameters.get("FlightNumber")
 
+      x = (getSchedule("flightnumber", int(flightnumber)))
+      
+      if (x):
+        x = x[0]
+        speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) 
+      else:
+        speech = "cannot find that flight " + str(flightnumber)
+      print("Response:")
+      print(speech)
     if (foundIntent):
       
       return {
