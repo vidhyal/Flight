@@ -209,7 +209,7 @@ def makeWebhookResult(req):
       if (x):
         speech = "The flights available are:"
         for i in x:
-          speech += str(i.airline) + " flight " + str(i.flightnumber)+ " departs " +str(i.DepartureCity)+" at " + str(i.DepartureTime) + " and reaches " +str(i.ArriveCity) + " at " + str(i.ArriveTime) +". "
+          speech += str(i.airline) + " flight " + str(i.flightnumber)+ " departs " +str(i.DepartureCity)+" at " + str(i.DepartureTime) + " and reaches " +str(i.ArrivalCity) + " at " + str(i.ArrivalTime) +". "
       else:
         speech = "There are no direct flights in our database between the cities you asked"
       print("Response:")
@@ -234,7 +234,9 @@ def makeWebhookResult(req):
 table =[]
 if __name__ == '__main__':
     makeTable()
-
+    #departcity = getCityFrom('fromAtlanta')
+    #arrivecity = getCityFrom('to Portland')
+    
     port = int(os.getenv('PORT', 5000))
 
     print ("Starting app on port %d" % port)
