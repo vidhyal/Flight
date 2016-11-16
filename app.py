@@ -103,14 +103,14 @@ def makeWebhookResult(req):
       parameters = result.get("parameters")
       flightnumber = parameters.get("FlightNumber")
 
-      #x = (getSchedule("flightnumber", int(flightnumber)))
+      x = (getSchedule("flightnumber", int(flightnumber)))
       
-      #if (x):
-      #  x = x[0]
-      #  speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.status)
-      #else:
-      #  speech = "cannot find that flight" + str(flightnumber)
-      speech = "new hi"
+      if (x):
+        x = x[0]
+        speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.status)
+      else:
+        speech = "cannot find that flight" + str(flightnumber)
+      #speech = "new hi"
       print("Response:")
       print(speech)
     if (foundIntent):
