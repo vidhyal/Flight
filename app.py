@@ -87,7 +87,7 @@ def makeWebhookResult(req):
       speech = "cannot find that flight" + str(flightnumber)
     print ("you asked for flight "+str(flightnumber) )
     print("Response:")
-    print (result)
+    #print (result)
     print(speech)
 
     return {
