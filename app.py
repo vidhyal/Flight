@@ -43,7 +43,7 @@ class Schedule():
 def makeTable():
 	#table = []
 	table.append(Schedule('AjaxAir', 113, 'Portland', 'Atlanta', '8:03 AM', '12:51 PM', 'Landed'))    
-	table.append(Schedule('AjaxAir',114, 'Atlnata', 'Portland', '2:05 PM', '4:44 PM', 'Boarding'))
+	table.append(Schedule('AjaxAir',114, 'Atlanta', 'Portland', '2:05 PM', '4:44 PM', 'Boarding'))
 	table.append(Schedule('BakerAir', 121, 'Atlanta', 'New York', '5:14 PM', '7:20 PM', 'Departed'))
 	table.append(Schedule('BakerAir', 122, 'New York', 'Portland', '9:00 PM', '12:13 AM', 'Scheduled'))
 	table.append(Schedule('BakerAir', 124,	'Portland', 'Atlanta','9:03 AM', '12:52 PM' ,'Delayed to 9:55'))
@@ -93,8 +93,7 @@ def makeWebhookResult(req):
         speech = str(x.airline) + " flight "+ str(x.flightnumber) +" departs "+ str(x.DepartureCity) + " at " + str(x.DepartureTime) + " and arrives at "+ str(x.ArrivalCity) + " at "+ str(x.ArrivalTime)
       else:
         speech = "cannot find that flight" + str(flightnumber)
-      print("Response:")
-      print(speech)
+      
 
       
     elif req.get("result").get("action") == "getStatus":
@@ -103,16 +102,17 @@ def makeWebhookResult(req):
       parameters = result.get("parameters")
       flightnumber = parameters.get("FlightNumber")
 
-      x = (getSchedule("flightnumber", int(flightnumber)))
+      #x = (getSchedule("flightnumber", int(flightnumber)))
       
-      if (x):
-        x = x[0]
-        speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.status)
-      else:
-        speech = "cannot find that flight" + str(flightnumber)
+      #if (x):
+      #  x = x[0]
+      #  speech = "The status of "+ str(x.airline) + " flight "+ str(x.flightnumber) + " is " + str(x.status)
+      #else:
+      #  speech = "cannot find that flight" + str(flightnumber)
+     speech = "new hi"
+    if (foundIntent):
       print("Response:")
       print(speech)
-    if (foundIntent):
       return {
           "speech": speech,
           "displayText": speech,
