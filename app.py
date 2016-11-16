@@ -163,7 +163,7 @@ def makeWebhookResult(req):
 
       if (x):
         x = x[0]
-        x1 = getTravelTime(x)
+#        x1 = getTravelTime(x)
         speech = str(x.airline) + " flight "+ str(x.flightnumber) +" flies for  " + str(x1)
       else:
         speech = "cannot find that flight " + str(flightnumber)
